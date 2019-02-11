@@ -29,7 +29,7 @@ class Option extends React.Component {
 
         this.setState({ diff: e.target.value });
 
-        if(e.target.value=='') {
+        if(e.target.value==='') {
             this.setState({ diff: '0' });
         }
 

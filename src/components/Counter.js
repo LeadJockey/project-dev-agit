@@ -9,7 +9,7 @@ class Counter extends React.Component {
     }
 }
 
-let mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
     return {
         value: state.counter.value
     };
