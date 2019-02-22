@@ -1,19 +1,16 @@
-import React from 'react';
-import Counter from './Counter';
-import Buttons from './Buttons';
-import Option from './Option';
+import React, { Component } from 'react'
 
-class App extends React.Component {
-    render(){
-        return (
-            <div style={ {textAlign: 'center'} }>
-                <Counter/>
-                <Option/>
-                <Buttons/>
-            </div>
-        );
-    }
+import Counter from './Counter'
 
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <div>hello react</div>
+        <Counter />
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App

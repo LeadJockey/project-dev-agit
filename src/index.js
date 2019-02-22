@@ -1,18 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
-import { Provider  } from 'react-redux';
-import App from './components/App';
-import counterApp from './reducers';
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'mobx-react'
+import DevTools from 'mobx-react-devtools'
 
-const store = createStore(counterApp);
-console.log('store', store.getState());
+import RootStore from './stores'
+import App from './components/App'
 
-const appElement = document.getElementById('root');
+const store = new RootStore()
+const rootElem = document.getElementById('root')
 
-ReactDOM.render(
-  <Provider store = {store}>
+render(
+  <Provider {...store}>
+    <>
       <App />
+      <DevTools />
+    </>
   </Provider>,
-  appElement
-);
+  rootElem
+)
+

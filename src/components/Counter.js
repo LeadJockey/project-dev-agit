@@ -1,20 +1,25 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { observer, inject } from 'mobx-react'
 
-class Counter extends React.Component {
-    render() {
-        return (
-            <h1>VALUE: { this.props.value }</h1>
-        );
-    }
+import css from './../assets/css/counter.css'
+
+@inject(({ counter }) => ({
+  count: counter.count,
+  increase: counter.increase,
+  decrease: counter.decrease
+}))
+
+@observer class Counter extends Component {
+  render() {
+    const { count, increase, decrease } = this.props
+    return (
+      <div className="comp_counter">
+        <button className="btn_count" onClick={() => { decrease() }}> - </button>
+        <span className="txt_count">{count}</span>
+        <button className="btn_count" onClick={() => { increase() }}> + </button>
+      </div>
+    )
+  }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        value: state.counter.value
-    };
-}
-
-Counter = connect(mapStateToProps)(Counter);
-
-export default Counter;
+export default Counter
