@@ -16,23 +16,22 @@ class App extends Component {
   render () {
     return (
       <Router>
-        <div className='wrapper'>
-          <div>Header</div>
-          <div>Index</div>
-          <div className='main'>
-            <Link to='/home'>home</Link>
-            <Routes />
+        <SizeContext.Provider
+          value={{ width: window.innerWidth, height: window.innerHeight }}
+        >
+          <div className='wrapper'>
+            <div>Header</div>
+            <div>Index</div>
+            <div className='main'>
+              <Link to='/home'>home</Link>
+              <hr />
+              <Link to='/counter'>counter</Link>
+              <Routes />
+            </div>
+            <div>Footer</div>
           </div>
-
-          <GoogleLogin
-            clientId='558582794007-m5unl35bhe57kfdtrmebi4ek50bunpp4.apps.googleusercontent.com'
-            buttonText='Login'
-            onSuccess={this.responseGoogle}
-            onFailure={this.responseGoogle}
-          />
-
-          <div>Footer</div>
-        </div>
+          {/* <LoadingScreen /> */}
+        </SizeContext.Provider>
       </Router>
     )
   }
