@@ -1,22 +1,27 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Link } from "react-router-dom"
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 import Routes from 'routes/Routes'
+
 import { SizeContext } from 'util/context'
 import 'assets/scss/app.scss'
+import Login from './Login'
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <Router>
-        <SizeContext.Provider value={{ width:window.innerWidth, height:window.innerHeight }}>
-          <div className="wrapper">
+        <SizeContext.Provider
+          value={{ width: window.innerWidth, height: window.innerHeight }}
+        >
+          <div className='wrapper'>
             <div>Header</div>
             <div>Index</div>
-            <div className="main">
-              <Link to="/home" >home</Link>
+            <Login />
+            <div className='main'>
+              <Link to='/home'>home</Link>
               <hr />
-              <Link to="/counter">counter</Link>
+              <Link to='/counter'>counter</Link>
               <Routes />
             </div>
             <div>Footer</div>
