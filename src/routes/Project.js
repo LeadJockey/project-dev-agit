@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
-import ProjectList from 'components/ProjectList';
-import Popup from 'components/Popup';
+
 
 class Project extends Component {
   render() {
@@ -15,9 +14,7 @@ class Project extends Component {
         <hr />
         <Link to="/works/1" >work 1</Link>
         <hr />
-        <ProjectList />
-        <Popup />
-        
+        <div>project detail area</div>
       </div>
     )
   }
