@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
+import ProjectList from 'components/ProjectList';
 
 class Project extends Component {
   render() {
@@ -12,6 +13,8 @@ class Project extends Component {
         <Link to={`/projects/${_id + 1}`} >project {_id + 1}</Link>
         <hr />
         <Link to="/works/1" >work 1</Link>
+        <hr />
+        <ProjectList />
       </div>
     )
   }

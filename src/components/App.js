@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Link } from "react-router-dom"
 
 import Routes from 'routes/Routes'
 import { SizeContext } from 'util/context'
-import LoadingScreen from "components/LoadingScreen"
-
 import 'assets/scss/app.scss'
 
 class App extends Component {
