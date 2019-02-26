@@ -2,17 +2,10 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 import Routes from 'routes/Routes'
-
-import GoogleLogin from 'react-google-login'
-
-require('assets/scss/app.scss')
+import { SizeContext } from 'util/context'
+import 'assets/scss/app.scss'
 
 class App extends Component {
-  responseGoogle (response) {
-    console.log(response.w3)
-
-    localStorage.v = 0
-  }
   render () {
     return (
       <Router>
