@@ -4,6 +4,7 @@ import { Route, Switch, Redirect } from "react-router-dom"
 import Home from './Home'
 import Project from './Project'
 import Work from './Work'
+import Test from './Test'
 
 class Routes extends Component {
   render() {
@@ -13,6 +14,7 @@ class Routes extends Component {
         <Route path="/home" exact component={Home} />
         <Route path="/projects/:id" exact component={Project} />
         <Route path="/works/:id" exact component={Work} />
+        <Route path="/counter" exact component={Test} />
         <Redirect to="/" />
       </Switch>
     )
