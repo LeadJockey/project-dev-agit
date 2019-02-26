@@ -4,7 +4,7 @@
     "name":"project-shawn1",
     "startDate":"2019.01.01",
     "endDate":"2019.02.01",
-    "percent":"100%",
+    "percent":100,
     "state":"완료"
   },
   {
@@ -12,7 +12,7 @@
     "name":"project-shawn2",
     "startDate":"2019.02.01",
     "endDate":"2019.03.01",
-    "percent":"80%",
+    "percent":80,
     "state":"진행중"
   },
   {
@@ -20,7 +20,7 @@
     "name":"project-shawn3",
     "startDate":"2019.03.01",
     "endDate":"2019.04.01",
-    "percent":"0%",
+    "percent":0,
     "state":"예정"
   }
 ]

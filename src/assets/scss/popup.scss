@@ -1,0 +1,25 @@
+.comp_popup{
+  position:fixed;
+  top:0;
+  right:0;
+  bottom: 0;
+  left:0;
+  overflow: auto;
+  z-index: 100;
+  background-color: rgba(0,0,0,.4);
+  .btn_close{
+    position: absolute;
+    top:15%;
+    right:20%;
+  }
+  .content_popup{
+    position: absolute;
+    top:20%;
+    left:20%;
+    right:20%;
+    bottom: 20%;
+    padding: 20px;
+    border: 1px solid #888;
+    background-color: #fefefe;
+  }
+}

@@ -1,6 +1,7 @@
 .comp_project{
   padding: 50px;
   border:1px solid #4286f4;
+  
   .tit_project{
     padding: 10px;
     font-size: 30px;
@@ -16,8 +17,19 @@
   .list_project{
     li{
       overflow: hidden;
+      position: relative;
       padding:10px;
       border-bottom:1px solid #000;
+      .group_btn{
+        position: absolute;
+        top:10px;
+        right:10px;
+      }
+      .link_project{
+        overflow: hidden;
+        display: block;
+        padding-right:100px;
+      }
       .tit_info{
         float: left;
       }
