@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 import Routes from 'routes/Routes'
+
 import { SizeContext } from 'util/context'
 import 'assets/scss/app.scss'
+import Login from './Login'
 
 class App extends Component {
   render () {
@@ -15,6 +17,7 @@ class App extends Component {
           <div className='wrapper'>
             <div>Header</div>
             <div>Index</div>
+            <Login />
             <div className='main'>
               <Link to='/home'>home</Link>
               <hr />
