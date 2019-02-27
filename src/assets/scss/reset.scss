@@ -28,9 +28,10 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   font-family: 'Noto Sans KR', sans-serif;
-  font-size: 14px;
+	font-size: 14px;
+	color:$mainFontColor;
+	background:$bgColor;
   line-height: 1;
-  background:$bgColor;
 }
 ol, ul {
 	list-style: none;

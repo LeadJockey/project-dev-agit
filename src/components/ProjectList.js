@@ -52,13 +52,22 @@ import 'assets/scss/components/projectList.scss'
     return (
       <li key={id}>
         <Link to={routePath} className="link_project">
-          <strong className="tit_info">{name}</strong>
-          <span className="group_info">
+          <div className="bg_img" />
+          <div className="logo_img" />
+          <div className="content" >
+          메인 정보
+            <strong className="tit_info">{name}</strong>
             <span className="txt_info">{startDate}</span>
             <span className="txt_info">{endDate}</span>
             <span className="txt_info">{percent}%</span>
             <span className="txt_info">{state}</span>
-          </span>
+          </div>
+          <div className="info" >
+            정보
+            <span className="txt_info">{endDate}</span>
+            <span className="txt_info">{percent}%</span>
+            <span className="txt_info">{state}</span>
+          </div>
         </Link>
         <div className="group_btn">
           <button type="button" className="btn_update" onClick={() => { open(updateBody) }}>수정</button>

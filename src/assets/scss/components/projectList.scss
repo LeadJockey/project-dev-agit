@@ -6,6 +6,7 @@
     padding: 10px;
     font-size: 30px;
   }
+
   .ctrl_project{
     padding:10px;
     text-align: right;
@@ -14,35 +15,44 @@
       height:20px;
     }
   }
+
   .list_project{
+    overflow: hidden;
     li{
-      overflow: hidden;
+      float: left;
       position: relative;
-      padding:10px;
-      border-bottom:1px solid #000;
+      width:30%;
+      height:300px; 
+      margin:5% 0;
+      background-color:yellow;
+      text-align:center;
+      box-sizing: border-box;
+      border:1px solid red;
+      border-radius: 3px;
+      
       .group_btn{
         position: absolute;
         top:10px;
         right:10px;
-      }
-      .link_project{
-        overflow: hidden;
-        display: block;
-        padding-right:100px;
-      }
-      .tit_info{
-        float: left;
-      }
-      .group_info{
-        float: right;
-        .txt_info{
+        > button{
           display: inline-block;
-          width:100px;
-          margin: 2px;
-          background-color: #efefef;
-          text-align: center
+          width: 35px;
+          height: 35px;
+          margin-left:5px;
+          border:1px solid red;
+          border-radius: 3px;
         }
       }
+      .link_project{
+        display: block;
+        height:100%;
+      }
+      .group_info{
+        height:20%;
+      }
+    }
+    li + li{
+      margin-left:5%; 
     }
   }
 }
