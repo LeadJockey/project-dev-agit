@@ -15,7 +15,7 @@ import 'assets/scss/popup.scss'
     return (
       <div className="comp_popup" onClick={() => { close() }}>
         <button type="button" className="btn_close" onClick={() => { close() }}>X</button>
-        <div className="content_popup">{body}</div>
+        <div className="content_popup" onClick={(e) => { e.stopPropagation() }}>{body}</div>
       </div>
     )
   }
