@@ -5,21 +5,22 @@ let id = 4
 
 class ProjectApi {
   //fetchProject = ()=> request.get('/api')
-  fetchProject = () => PROJECTS
+  fetchProjects = () => PROJECTS
 }
 
 class ProjectStore {
-  @observable projects = PROJECTS || []
+  @observable projects = []
 
   constructor(root) {
     this.root = root
     this.api = new ProjectApi()
+    this.fetchTodos()
   }
 
   fetchTodos = async () => {
-    const projects = await this.api.fetchTodos();
+    const projects = await this.api.fetchProjects()
     runInAction(() => {
-      this.projects = projects;
+      this.projects = projects
     });
   }
 
@@ -38,9 +39,14 @@ class ProjectStore {
     this.projects = this.projects.filter((project)=> project.id !== id)
   }
 
-  @action update = () => {
-    console.log('update');
-
+  @action update = (updatedProject) => {
+    this.projects = this.projects.map((project) => {
+      if(project.id === updatedProject.id){
+        return Object.assign(project, updatedProject)
+      }
+      return project
+    })
+    console.log('projects', this.projects);
   }
 }
 

@@ -9,19 +9,38 @@ import 'assets/scss/projectList.scss'
   remove: project.remove,
   update: project.update,
   projects: project.projects,
-  open: modal.open
+  open: modal.open,
+  close: modal.close
 }))
 
 @observer class ProjectList extends Component {
+  nameEl = React.createRef()
+  startDateEl = React.createRef()
+  endDateEl = React.createRef()
+  percentEl = React.createRef()
+  stateEl = React.createRef()
 
-  getUpdateItemBody = ({ id, name, startDate, endDate, percent, state }) =>{
+  getUpdateItemBody = ({ id, name, startDate, endDate, percent, state }) => {
+    const { update, close } = this.props
+    const updateThenClose = () => {
+      update({
+        id: id,
+        name: this.nameEl.value || name,
+        startDate: this.startDateEl.value || startDate,
+        endDate: this.endDateEl.value || endDate,
+        percent: parseInt((this.percentEl.value || percent), 10),
+        state: this.stateEl.value || state,
+      })
+      close()
+    }
     return (
-      <div>
-        <input key="name" type="text" className="input_update" placeholder={name} />
-        <input key="startDate" type="text" className="input_update" placeholder={startDate} />
-        <input key="endDate" type="text" className="input_update" placeholder={endDate} />
-        <input key="percent" type="number" className="input_update" placeholder={percent} min="0" max="100" />
-        <input key="state" type="text" className="input_update" placeholder={state} />
+      <div className="update_project">
+        <input key="name" type="text" className="input_update" placeholder={name} ref={el => this.nameEl = el} />
+        <input key="startDate" type="text" className="input_update" placeholder={startDate} ref={el => this.startDateEl = el} />
+        <input key="endDate" type="text" className="input_update" placeholder={endDate} ref={el => this.endDateEl = el} />
+        <input key="percent" type="number" className="input_update" placeholder={percent} min="0" max="100" ref={el => this.percentEl = el} />
+        <input key="state" type="text" className="input_update" placeholder={state} ref={el => this.stateEl = el} />
+        <button key="submit" type="button" onClick={updateThenClose}>submit</button>
       </div>
     )
   }

@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 
-import Routes from 'routes/Routes'
-
 import { SizeContext } from 'util/context'
-import 'assets/scss/app.scss'
+import Routes from 'routes/Routes'
 import Login from './Login'
+import Popup from './Popup';
+import 'assets/scss/app.scss'
+
+
 
 class App extends Component {
-  render () {
+  render() {
     return (
       <Router>
-        <SizeContext.Provider
-          value={{ width: window.innerWidth, height: window.innerHeight }}
-        >
+        <SizeContext.Provider value={{ width: window.innerWidth, height: window.innerHeight }}>
           <div className='wrapper'>
             <div>Header</div>
             <div>Index</div>
@@ -26,7 +26,7 @@ class App extends Component {
             </div>
             <div>Footer</div>
           </div>
-          {/* <LoadingScreen /> */}
+          <Popup />
         </SizeContext.Provider>
       </Router>
     )
