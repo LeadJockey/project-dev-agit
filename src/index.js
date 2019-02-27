@@ -6,7 +6,7 @@ import DevTools from 'mobx-react-devtools'
 import RootStore from './stores'
 import App from './components/App'
 
-import 'assets/scss/reset.scss'
+import 'assets/scss/index.scss'
 
 const store = new RootStore()
 const rootElem = document.getElementById('root')

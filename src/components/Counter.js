@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 
-import 'assets/scss/counter.scss'
+import 'assets/scss/components/counter.scss'
 
 @inject(({ counter }) => ({
   count: counter.count,

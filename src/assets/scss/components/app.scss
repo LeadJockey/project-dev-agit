@@ -1,8 +1,11 @@
+@import '../base';
+
 .side_menu{
   float: left;
   width:220px;
   .user_profile{
     height:200px;    
+    background-color: $subColor1;
   }
 }
 .main{

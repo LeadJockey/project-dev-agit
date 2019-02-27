@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
-import 'assets/scss/popup.scss'
+import 'assets/scss/components/popup.scss'
 
 @inject(({ modal }) => ({
   isOpen: modal.modal.isOpen,

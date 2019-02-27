@@ -5,7 +5,7 @@ import { SizeContext } from 'util/context'
 import Routes from 'routes/Routes'
 import Login from './Login'
 import Popup from './Popup'
-import 'assets/scss/app.scss'
+import 'assets/scss/components/app.scss'
 
 class App extends Component {
   render () {
