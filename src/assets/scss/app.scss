@@ -1,13 +1,13 @@
-
-
-.wrapper{
-  margin: 100px;
-  padding: 20px;
-  border: 1px solid #444;
-  background-color:#fff;
+.side_menu{
+  float: left;
+  width:220px;
+  .user_profile{
+    height:200px;    
+  }
 }
 .main{
-  margin:100px;
+  display: block;
+  overflow: hidden;  
   h1 {
     padding: 20px 0;
     font-size:40px;
