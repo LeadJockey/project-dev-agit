@@ -1,3 +1,4 @@
+@import '../base';
 .comp_project{
   padding: 50px;
   border:1px solid #4286f4;
@@ -20,14 +21,13 @@
     overflow: hidden;
     li{
       float: left;
+      overflow: hidden;
       position: relative;
-      width:30%;
+      width:260px;
       height:300px; 
-      margin:5% 0;
-      background-color:yellow;
+      margin:10px;
+      background-color:$subColor2;
       text-align:center;
-      box-sizing: border-box;
-      border:1px solid red;
       border-radius: 3px;
       
       .group_btn{
@@ -36,23 +36,55 @@
         right:10px;
         > button{
           display: inline-block;
-          width: 35px;
-          height: 35px;
+          width: 30px;
+          height: 26px;
           margin-left:5px;
-          border:1px solid red;
           border-radius: 3px;
         }
       }
       .link_project{
         display: block;
         height:100%;
+        text-decoration:none;
+        color:$mainFontColor;
+        .bg_img{
+          height:100px;
+          background-color:#efefef;
+        }
+        .logo_img{
+          overflow: hidden;
+          position: absolute;
+          top:50px;
+          left:calc(50% - 50px);
+          width:100px;
+          height:100px;
+          background-color:#000;
+          border-radius:50%
+        }
+        .img_thumb{
+          display:block;
+          width:100%;
+        }
+        .content{
+          padding-top:50px;
+          .tit_info{
+            display:block;
+            padding:10px;
+            font-size:30px;
+            font-weight:800;
+          }
+          .txt_date{
+            display:block;
+            padding:10px;
+          }
+        }
+        .info{
+
+        }
       }
       .group_info{
         height:20%;
       }
-    }
-    li + li{
-      margin-left:5%; 
     }
   }
 }

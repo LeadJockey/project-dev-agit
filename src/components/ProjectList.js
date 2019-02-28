@@ -53,17 +53,16 @@ import 'assets/scss/components/projectList.scss'
       <li key={id}>
         <Link to={routePath} className="link_project">
           <div className="bg_img" />
-          <div className="logo_img" />
-          <div className="content" >
-          메인 정보
+          <picture className="logo_img">
+            <img src="" className="img_thumb" />
+          </picture>
+          <div className="content">
             <strong className="tit_info">{name}</strong>
-            <span className="txt_info">{startDate}</span>
-            <span className="txt_info">{endDate}</span>
+            <span className="txt_date">{startDate} ~ {endDate}</span>
             <span className="txt_info">{percent}%</span>
             <span className="txt_info">{state}</span>
           </div>
-          <div className="info" >
-            정보
+          <div className="info">
             <span className="txt_info">{endDate}</span>
             <span className="txt_info">{percent}%</span>
             <span className="txt_info">{state}</span>
