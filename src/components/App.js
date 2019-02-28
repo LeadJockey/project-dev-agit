@@ -5,8 +5,8 @@ import { SizeContext } from 'util/context'
 import Routes from 'routes/Routes'
 import Login from './Login'
 import Popup from './Popup'
-import 'assets/scss/components/app.scss'
 
+import 'assets/scss/components/app.scss'
 class App extends Component {
   render () {
     return (
@@ -17,7 +17,15 @@ class App extends Component {
           <div className='wrapper'>
             <header className='app_header'>header</header>
             <aside className='side_menu'>
-              <div className='user_profile' />
+              <div className='user_profile'>
+                <picture className='user_avata'>
+                  <img
+                    src='http://image.chosun.com/sitedata/image/201810/01/2018100103196_0.jpg'
+                    alt=''
+                  />
+                </picture>
+                <strong className='user_name'>User Name</strong>
+              </div>
               <ul className='user_menu'>
                 <li>User Menu 1</li>
                 <li>User Menu 2</li>

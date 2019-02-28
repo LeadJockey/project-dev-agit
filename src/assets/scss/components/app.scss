@@ -1,16 +1,39 @@
 @import '../base';
 
+.app_header{
+  display: none;
+}
 .side_menu{
   float: left;
-  width:220px;
+  width:300px;
   .user_profile{
-    height:200px;    
-    background-color: $subColor1;
+    overflow: hidden;
+    background-color: #1B212F;
+    padding:10px 20px;
+  }
+  .user_avata{
+    overflow: hidden;
+    float: left;
+    width:50px;
+    height:50px;
+    margin-right: 15px;
+    border-radius: 50%;
+    img{
+      width: 100%;
+    }
+  }
+  .user_name{
+    display: block;
+    overflow: hidden;
+    font-size:16px;
+    line-height: 50px;
+    color: #fff;
   }
 }
 .main{
   display: block;
   overflow: hidden;  
+  padding:50px;
   h1 {
     padding: 20px 0;
     font-size:40px;
