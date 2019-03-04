@@ -69,8 +69,12 @@ import 'assets/scss/components/projectList.scss'
           </div>
         </Link>
         <div className="group_btn">
-          <button type="button" className="btn_update" onClick={() => { open(updateBody) }}>수정</button>
-          <button type="button" className="btn_remove" onClick={() => { remove(id) }}>삭제</button>
+          <button type="button" className="ti-pencil-alt btn_update" onClick={() => { open(updateBody) }}>
+            <span className="screen_out">수정</span>
+          </button>
+          <button type="button" className="ti-trash btn_remove" onClick={() => { remove(id) }}>
+            <span className="screen_out">삭제</span>
+          </button>
         </div>
       </li>
     )
@@ -81,10 +85,14 @@ import 'assets/scss/components/projectList.scss'
     return (
       <div className="comp_project">
         <h2 className="tit_project">프로젝트 리스트</h2>
-        <div className="ctrl_project">
-          <button type="button" className="btn_add" onClick={() => { add() }}>추가</button>
-        </div>
         <ul className="list_project">
+          <li>
+            <button type="button" className="btn_add" onClick={() => { add() }}>
+              <span className="ti-plus test">
+                <span className="screen_out">추가</span>
+              </span>
+            </button>
+          </li>
           {projects.map(this.renderItem)}
         </ul>
       </div>

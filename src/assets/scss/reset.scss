@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 body {
   font-family: 'Noto Sans KR', sans-serif;
 	font-size: 14px;
-	color:$mainFontColor;
+	color:$light;
 	background:$bgColor;
   line-height: 1;
 }
@@ -47,4 +47,26 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+/* global */
+
+.screen_out{
+	overflow:hidden;
+	position:absolute;
+	width:0;
+	height:0;
+	line-height:0;
+	text-indent:-9999px;
+}
+.img_thumb{
+	display:block;
+	width:100%;
+}
+
+.txt_ellipsis{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-wrap:normal;
 }
