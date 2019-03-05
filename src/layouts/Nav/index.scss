@@ -1,0 +1,17 @@
+@import '../../assets/scss/base';
+.app_nav{
+  position:fixed;
+  top:$headerHeight;
+  left:0;
+  bottom:0;
+  width:15%;
+  height:100%;
+  padding:50px;
+  box-sizing:border-box;
+  background-color:$gray-dark;
+  .list_route{
+    > li{
+      padding:10px;
+    }
+  }
+}
