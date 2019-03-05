@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { TitleBox,EmptyContent } from 'components'
+import { TitleBox, EmptyContent } from 'components'
 import { korean } from 'languages'
 
 class Home extends Component {
