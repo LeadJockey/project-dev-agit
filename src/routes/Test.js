@@ -1,21 +1,20 @@
 import React, { Component } from 'react'
-import Counter from 'components/Counter'
-import LoadingScreen from 'components/LoadingScreen'
+import { TitleBox, Counter } from 'components'
+// import LoadingScreen from 'components/LoadingScreen'
 import DelayLink from 'components/DelayLink'
+import { korean } from 'languages'
 
 class Test extends Component {
-  render(){
+  render() {
     return (
-      <div>
-        <h1>Counter</h1>
-        <hr />
+      <section className="app_section">
+        <TitleBox {...korean.route.test} />
         <Counter />
-        <hr />
         <DelayLink to="/projects/1" delay={1000}>project 1</DelayLink>
-        <hr />
+        <br/>
         <DelayLink to="/work/1" delay={2000}>work 1</DelayLink>
-        <LoadingScreen />
-      </div>
+        {/* <LoadingScreen /> */}
+      </section>
     )
   }
 }

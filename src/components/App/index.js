@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { SizeContext } from 'util/context'
 import { Header, Aside, Nav } from 'layouts'
-import Routes from 'routes/Routes'
+import { Routes } from 'routes'
 import './index.scss'
 
 class App extends Component {
