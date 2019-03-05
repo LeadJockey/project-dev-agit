@@ -1,0 +1,23 @@
+@import '../../assets/scss/base';
+.app_wrapper{
+  
+}
+
+.app_main{
+  overflow:hidden;
+  width:70%;
+  min-width:800px;
+  min-height:100vh;
+  margin:0 auto;
+  padding-top:$headerHeight;
+  .app_content{
+    height:100%;
+    padding:10px;
+  }
+  .app_section{
+    padding-bottom:10px;
+    border-bottom:1px solid $yellow;
+  }
+}
+
+

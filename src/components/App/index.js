@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom'
 import { SizeContext } from 'util/context'
 import { Header, Aside, Nav } from 'layouts'
 import Routes from 'routes/Routes'
+import './index.scss'
 
 class App extends Component {
   state = {
