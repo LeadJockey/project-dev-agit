@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
-import { TitleBox } from 'components';
-
-const data = {
-  title:'HOME',
-  desc:'welcome to visit our dev-agit'
-}
+import { TitleBox,EmptyContent } from 'components'
+import { korean } from 'languages'
 
 class Home extends Component {
-  render(){
+  render() {
     return (
-      <TitleBox {...data} />
+      <>
+        <section className="app_section">
+          <TitleBox {...korean.route.home} />
+        </section>
+        <section className="app_section">
+          <EmptyContent />
+        </section>
+      </>
     )
   }
 }
