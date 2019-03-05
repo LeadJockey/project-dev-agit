@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 import { SizeContext } from 'util/context'
-import Aside from 'layouts/Aside'
-import Header from 'layouts/Header'
+import { Header, Aside, Nav } from 'layouts'
 import Routes from 'routes/Routes'
 import Login from './Login'
 import Popup from './Popup'
@@ -32,9 +31,6 @@ class App extends Component {
         <SizeContext.Provider value={{ width, height }}>
           <div className='app_wrapper'>
             <Header />
-            <nav>
-
-            </nav>
             <main className="app_main">
               <article className='app_content'>
                 <section className="app_section">콘텐츠</section>
@@ -51,7 +47,6 @@ class App extends Component {
                 <Routes /> */}
               </article>
             </main>
-            <Aside />
           </div>
           <Popup />
         </SizeContext.Provider>
