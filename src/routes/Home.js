@@ -1,19 +1,15 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom"
-import ProjectList from 'components/ProjectList';
+import { TitleBox } from 'components';
+
+const data = {
+  title:'HOME',
+  desc:'welcome to visit our dev-agit'
+}
 
 class Home extends Component {
   render(){
     return (
-      <div>
-        <h1>Home</h1>
-        <hr />
-        <Link to="/projects/1">projects 1</Link>
-        <hr />
-        <Link to="/works/1" >work 1</Link>
-        <ProjectList />
-        
-      </div>
+      <TitleBox {...data} />
     )
   }
 }
