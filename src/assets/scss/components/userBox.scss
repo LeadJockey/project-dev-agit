@@ -1,0 +1,22 @@
+@import '../base';
+.group_user{
+  overflow:hidden;
+  padding:10px;
+  border:1px solid $lineColor;
+  box-sizing:border-box;
+  .wrap_thumb{
+    float:left;
+    overflow:hidden;
+    width:60px;
+    height:60px;
+    border-radius:$radius;
+  }
+  .list_user{
+    overflow:hidden;
+    padding:10px;
+    > dd{
+      font-weight:600;
+      line-height:20px;
+    }
+  }
+}

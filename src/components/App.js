@@ -1,32 +1,57 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
-
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 import { SizeContext } from 'util/context'
+import Aside from 'layouts/Aside'
+import Header from 'layouts/Header'
 import Routes from 'routes/Routes'
 import Login from './Login'
 import Popup from './Popup'
-import SideMenu from './SideMenu'
-
-import 'assets/scss/components/app.scss'
+import 'assets/scss/layout.scss'
 
 class App extends Component {
-  render () {
+  state = {
+    width: window.innerWidth,
+    height: window.innerHeight,
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.updateDimensions)
+  }
+
+  updateDimensions = () => {
+    this.setState({
+      height: window.innerHeight,
+      width: window.innerWidth
+    })
+  }
+
+  render() {
+    const { width, height } = this.state
     return (
       <Router>
-        <SizeContext.Provider
-          value={{ width: window.innerWidth, height: window.innerHeight }}
-        >
-          <div className='wrapper'>
-            <header className='app_header'>header</header>
-            <SideMenu />
-            <Login />
-            <div className='main'>
-              <Link to='/home'>home</Link>
-              <hr />
-              <Link to='/counter'>counter</Link>
-              <Routes />
-            </div>
-            <div>Footer</div>
+        <SizeContext.Provider value={{ width, height }}>
+          <div className='app_wrapper'>
+            <Header />
+            <nav>
+
+            </nav>
+            <main className="app_main">
+              <article className='app_content'>
+                <section className="app_section">콘텐츠</section>
+                <section className="app_section">콘텐츠</section>
+                <section className="app_section">콘텐츠</section>
+                <section className="app_section">콘텐츠</section>
+                <section className="app_section">콘텐츠</section>
+                <section className="app_section">콘텐츠</section>
+                <section className="app_section">콘텐츠</section>
+                <section className="app_section">콘텐츠</section>
+                <section className="app_section">콘텐츠</section>
+                <section className="app_section">콘텐츠</section>
+                {/* <Login />
+                <Routes /> */}
+              </article>
+            </main>
+            <Aside />
           </div>
           <Popup />
         </SizeContext.Provider>

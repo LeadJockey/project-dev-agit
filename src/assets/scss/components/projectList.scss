@@ -1,48 +1,92 @@
-.comp_project{
-  padding: 50px;
-  border:1px solid #4286f4;
-  
-  .tit_project{
-    padding: 10px;
-    font-size: 30px;
-  }
-  .ctrl_project{
-    padding:10px;
-    text-align: right;
-    background-color: #efefef;
-    .btn_add{
-      height:20px;
-    }
-  }
-  .list_project{
-    li{
-      overflow: hidden;
-      position: relative;
-      padding:10px;
-      border-bottom:1px solid #000;
-      .group_btn{
-        position: absolute;
-        top:10px;
-        right:10px;
-      }
-      .link_project{
-        overflow: hidden;
-        display: block;
-        padding-right:100px;
-      }
-      .tit_info{
-        float: left;
-      }
-      .group_info{
-        float: right;
-        .txt_info{
-          display: inline-block;
-          width:100px;
-          margin: 2px;
-          background-color: #efefef;
-          text-align: center
-        }
-      }
-    }
-  }
-}
+// @import '../base';
+// .comp_project{
+//   padding: 50px;
+//   border:1px solid #4286f4;
+//   .tit_project{
+//     padding: 10px;
+//     font-size: 30px;
+//   }
+//   .logo_img{
+//     overflow: hidden;
+//     position: absolute;
+//     top:50px;
+//     left:calc(50% - 50px);
+//     width:100px;
+//     height:100px;
+//     background-color:#000;
+//     border-radius:50%
+//   }
+//   .img_thumb{
+//     display:block;
+//     width:100%;
+//   }
+//   .btn_add{
+//     height:100%;
+//     width:100%;
+//     border:5px dashed #777;
+//     background-color:#efefef;
+//     .test{
+//       display:inline-block;
+//       width:100px;
+//       height:100px;
+//       font-size:100px;
+//       border:5px solid #777;
+//       border-radius:50%;
+//     }
+//   }
+//   .list_project{
+//     overflow: hidden;
+//     li{
+//       float: left;
+//       overflow: hidden;
+//       position: relative;
+//       width:260px;
+//       height:300px; 
+//       margin:10px;
+//       background-color:$subColor2;
+//       text-align:center;
+//       border-radius: 3px;
+//       .group_btn{
+//         position: absolute;
+//         top:10px;
+//         right:10px;
+//         > button{
+//           display: inline-block;
+//           width: 30px;
+//           height: 26px;
+//           margin-left:5px;
+//           border-radius: 3px;
+//         }
+//       }
+//       .link_project{
+//         display: block;
+//         height:100%;
+//         text-decoration:none;
+//         color:$mainFontColor;
+//         .bg_img{
+//           height:100px;
+//           background-color:#efefef;
+//         }
+//         .content{
+//           padding-top:50px;
+//           .tit_info{
+//             display:block;
+//             padding:10px;
+//             font-size:30px;
+//             font-weight:800;
+//           }
+//           .txt_date{
+//             display:block;
+//             padding:10px;
+//           }
+//         }
+//         .info{
+
+//         }
+//       }
+//       .group_info{
+//         height:20%;
+//       }
+//     }
+//   }
+// }

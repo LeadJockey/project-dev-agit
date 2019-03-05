@@ -1,0 +1,52 @@
+@import 'base';
+.app_wrapper{
+}
+.app_header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:50px;
+  background-color:$yellow;
+  z-index:1000;
+  text-align:center;
+  .app_tit{
+    position:absolute;
+    top:0;
+    left:0;
+    height:50px;
+    padding:0 10px;
+    line-height:50px;
+  }
+}
+.app_aside{
+  position:fixed;
+  overflow-y:auto;
+  overflow-x:hidden;
+  width:30%;
+  top:$headerHeight;
+  left:0;
+  bottom:0;
+  background-color:yellow;
+  z-index:900;
+
+}
+.app_main{
+  overflow:hidden;
+  width:70%;
+  min-width:800px;
+  min-height:100vh;
+  margin:0 auto;
+  padding-top:$headerHeight;
+  background-color: green;
+  .app_content{
+    height:100%;
+    padding:10px;
+    background-color: red
+  }
+  .app_section{
+    height:600px;
+  }
+}
+
+
