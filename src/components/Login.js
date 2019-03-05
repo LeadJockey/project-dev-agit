@@ -8,8 +8,11 @@ class Login extends Component {
   }
 
   authentication = response => {
+    console.log(response)
     sessionStorage.setItem('Eea', response.w3.Eea)
     sessionStorage.setItem('userName', response.w3.ig)
+    sessionStorage.setItem('userImg', response.w3.Paa)
+
     this.setState({
       login: true
     })
@@ -26,14 +29,29 @@ class Login extends Component {
     })
   }
 
+  loginCheck = () => {
+    if (sessionStorage.Eea) this.setState({ login: true })
+  }
+  componentDidMount () {
+    this.loginCheck()
+  }
   render () {
     return (
       <div className='login_comp'>
-        {
-          !this.state.login
-            ? <GoogleLogin clientId={CLIENT_ID} buttonText='Login' onSuccess={this.authentication} onFailure={this.authenticationFail} />
-            : <GoogleLogout clientId={CLIENT_ID} buttonText='Logout' onLogoutSuccess={this.logout} />
-        }
+        {!this.state.login ? (
+          <GoogleLogin
+            clientId={CLIENT_ID}
+            buttonText='Login'
+            onSuccess={this.authentication}
+            onFailure={this.authenticationFail}
+          />
+        ) : (
+          <GoogleLogout
+            clientId={CLIENT_ID}
+            buttonText='Logout'
+            onLogoutSuccess={this.logout}
+          />
+        )}
       </div>
     )
   }

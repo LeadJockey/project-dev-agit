@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 
 import { SizeContext } from 'util/context'
 import Routes from 'routes/Routes'
 import Login from './Login'
 import Popup from './Popup'
+import SideMenu from './SideMenu'
 
 import 'assets/scss/components/app.scss'
+
 class App extends Component {
   render () {
     return (
@@ -16,23 +18,7 @@ class App extends Component {
         >
           <div className='wrapper'>
             <header className='app_header'>header</header>
-            <aside className='side_menu'>
-              <div className='user_profile'>
-                <picture className='user_avata'>
-                  <img
-                    src='http://image.chosun.com/sitedata/image/201810/01/2018100103196_0.jpg'
-                    alt=''
-                  />
-                </picture>
-                <strong className='user_name'>User Name</strong>
-              </div>
-              <ul className='user_menu'>
-                <li>User Menu 1</li>
-                <li>User Menu 2</li>
-                <li>User Menu 3</li>
-                <li>User Menu 4</li>
-              </ul>
-            </aside>
+            <SideMenu />
             <Login />
             <div className='main'>
               <Link to='/home'>home</Link>
