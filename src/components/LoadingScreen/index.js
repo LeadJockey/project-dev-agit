@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { SizeContext } from 'util/context'
 import { FPS } from 'util/constants'
+import './index.scss'
 
 class LoadingScreen extends Component {
 
@@ -35,7 +36,7 @@ class LoadingScreen extends Component {
     ctx.fillStyle = PANEL_COLOR
     this.movement = setInterval(() => {
       ctx.clearRect(0, 0, width, height)
-      ctx.fillRect(tick += 10, 0, 300, height)
+      ctx.fillRect(tick += 16, 0, 300, height)
       if (tick > width) {
         clearInterval(this.movement)
         this.canvas.style.display = 'none'
@@ -47,7 +48,7 @@ class LoadingScreen extends Component {
     return (
       <SizeContext.Consumer>
         {() => (
-          <canvas className="loading_screen" {...this.context} ref={el => this.canvas = el}>
+          <canvas className="comp_loading_screen" {...this.context} ref={el => this.canvas = el}>
             Your browser does not support the HTML5 canvas tag
           </canvas>
         )}
