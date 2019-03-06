@@ -1,10 +1,25 @@
 import React, { Component } from 'react'
 import { SizeContext } from 'util/context'
+import { FPS } from 'util/constants'
 
 class LoadingScreen extends Component {
+
   static contextType = SizeContext
+
+  movement = null
+
   canvas = React.createRef()
-  
+
+  componentDidMount() {
+    this.resizeCanvas()
+    this.animateScreen()
+  }
+
+  componentWillUnmount() {
+    if (this.movement) {
+      this.movement = clearInterval(this.movement)
+    }
+  }
 
   resizeCanvas = () => {
     const { width, height } = this.context
@@ -13,26 +28,19 @@ class LoadingScreen extends Component {
   }
 
   animateScreen = () => {
-    const FPS = 1000 / 60
     const PANEL_COLOR = '#ffd200'
     const { width, height } = this.context
     const ctx = this.canvas.getContext('2d')
-    let movement = null
     let tick = 0
     ctx.fillStyle = PANEL_COLOR
-    movement = setInterval(() => {
+    this.movement = setInterval(() => {
       ctx.clearRect(0, 0, width, height)
       ctx.fillRect(tick += 10, 0, 300, height)
       if (tick > width) {
-        clearInterval(movement)
+        clearInterval(this.movement)
         this.canvas.style.display = 'none'
       }
     }, FPS)
-  }
-
-  componentDidMount() {
-    this.resizeCanvas()
-    this.animateScreen()
   }
 
   render() {

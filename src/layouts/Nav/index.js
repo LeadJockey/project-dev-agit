@@ -14,7 +14,7 @@ class Nav extends Component {
           <li><Link to={ROUTE_PATH.HOME} >HOME</Link></li>
           <li><Link to={ROUTE_PATH.PROJECTS} >PROJECTS</Link></li>
           <li><Link to={ROUTE_PATH.WORKS + '/1'} >WORKS</Link></li>
-          <li><Link to={ROUTE_PATH.COUNTER} >COUNTER</Link></li>
+          <li><Link to={ROUTE_PATH.TEST} >TEST</Link></li>
         </ul>
       </nav>
     )

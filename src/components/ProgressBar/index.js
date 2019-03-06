@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
+import { FPS } from 'util/constants'
+
 import './index.scss'
 
 class ProgressBar extends Component {
-  bar = React.createRef()
+
   movement = null
+
+  bar = React.createRef()
 
   componentDidMount(){
     const { percent } = this.props
@@ -24,7 +28,7 @@ class ProgressBar extends Component {
       }else{
         this.bar.style.width = `${tick += 1}%`
       }
-    }, 60)
+    }, FPS)
   }
 
   render() {
