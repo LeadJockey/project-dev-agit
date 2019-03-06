@@ -1,0 +1,16 @@
+{
+  "route": {
+    "home": {
+      "title": "HOME",
+      "desc": "데브-아지트에 방문해 주셔서 감사합니다."
+    },
+    "test": {
+      "title": "TEST",
+      "desc": "테스트 : 지연링크, 로딩스크린, 카운터"
+    },
+    "project": {
+      "title": "PROJECT LIST",
+      "desc": "프로젝트 목록 입니다."
+    }
+  }
+}

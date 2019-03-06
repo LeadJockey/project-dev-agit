@@ -1,0 +1,9 @@
+._motion_comm{
+  overflow:hidden;
+  transition:all .9s cubic-bezier(0, .21, .03, 1.01) 1s;
+  
+  ._to_right{
+    transform:translate(-100%, 0)
+  }
+  ._active ._to_right{transform:translate(0, 0)}
+}

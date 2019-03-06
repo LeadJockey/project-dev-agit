@@ -6,9 +6,11 @@
   left:0;
   right:0;
   height:50px;
-  background-color:$yellow;
+  background-color:$dark;
   z-index:1000;
   text-align:center;
+  border-bottom:1px solid $yellow;
+  box-sizing:border-box;
   .app_tit{
     position:absolute;
     top:0;

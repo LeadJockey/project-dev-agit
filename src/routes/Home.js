@@ -1,19 +1,18 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom"
-import ProjectList from 'components/ProjectList';
+import { TitleBox, EmptyContent } from 'components'
+import { korean } from 'languages'
 
 class Home extends Component {
-  render(){
+  render() {
     return (
-      <div>
-        <h1>Home</h1>
-        <hr />
-        <Link to="/projects/1">projects 1</Link>
-        <hr />
-        <Link to="/works/1" >work 1</Link>
-        <ProjectList />
-        
-      </div>
+      <>
+        <section className="app_section">
+          <TitleBox {...korean.route.home} />
+        </section>
+        <section className="app_section">
+          <EmptyContent />
+        </section>
+      </>
     )
   }
 }

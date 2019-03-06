@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { SizeContext } from 'util/context'
 import { Header, Aside, Nav } from 'layouts'
-import Routes from 'routes/Routes'
+import { Routes } from 'routes'
+import './index.scss'
 
 class App extends Component {
   state = {
     width: window.innerWidth,
     height: window.innerHeight,
+    languageType: 'korean'
   }
 
   componentDidMount() {
@@ -22,7 +24,7 @@ class App extends Component {
   }
 
   render() {
-    const { width, height } = this.state
+    const { width, height, languageType } = this.state
     return (
       <Router>
         <SizeContext.Provider value={{ width, height }}>

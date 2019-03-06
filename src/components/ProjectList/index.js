@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import { observer, inject } from 'mobx-react'
-
-import 'assets/scss/components/projectList.scss'
+import { ProgressBar } from 'components'
+import './index.scss'
 
 @inject(({ project, modal }) => ({
   add: project.add,
@@ -45,29 +45,41 @@ import 'assets/scss/components/projectList.scss'
     )
   }
 
+  renderAddItem = () => {
+    const { add } = this.props
+    return (
+      <li>
+        <div className="card_project">
+          <button type="button" className="btn_add" onClick={() => { add() }}>
+            <span className="ti-plus test">
+              <span className="screen_out">추가</span>
+            </span>
+          </button>
+        </div>
+      </li>
+    )
+  }
+
   renderItem = ({ id, name, startDate, endDate, percent, state }) => {
     const routePath = `/projects/${id}`
     const { remove, open } = this.props
     const updateBody = this.getUpdateItemBody({ id, name, startDate, endDate, percent, state })
     return (
       <li key={id}>
-        <Link to={routePath} className="link_project">
-          <div className="bg_img" />
-          <picture className="logo_img">
-            <img src="" className="img_thumb" />
-          </picture>
-          <div className="content">
-            <strong className="tit_info">{name}</strong>
-            <span className="txt_date">{startDate} ~ {endDate}</span>
-            <span className="txt_info">{percent}%</span>
-            <span className="txt_info">{state}</span>
-          </div>
-          <div className="info">
-            <span className="txt_info">{endDate}</span>
-            <span className="txt_info">{percent}%</span>
-            <span className="txt_info">{state}</span>
-          </div>
-        </Link>
+        <div className="card_project">
+          <Link to={routePath} className="link_project">
+            <div className="card_bg" />
+            <picture className="card_img">
+              <img src="https://dummyimage.com/100x100/ffffff/333333" className="img_thumb" />
+            </picture>
+            <div className="card_cont">
+              <strong className="tit_cont">{name}</strong>
+              <span className="txt_info">{startDate} ~ {endDate}</span>
+              <span className="txt_info">상태 : {state}</span>
+              <ProgressBar percent={percent} />
+            </div>
+          </Link>
+        </div>
         <div className="group_btn">
           <button type="button" className="ti-pencil-alt btn_update" onClick={() => { open(updateBody) }}>
             <span className="screen_out">수정</span>
@@ -81,21 +93,12 @@ import 'assets/scss/components/projectList.scss'
   }
 
   render() {
-    const { add, projects } = this.props
+    const { projects } = this.props
     return (
-      <div className="comp_project">
-        <h2 className="tit_project">프로젝트 리스트</h2>
-        <ul className="list_project">
-          <li>
-            <button type="button" className="btn_add" onClick={() => { add() }}>
-              <span className="ti-plus test">
-                <span className="screen_out">추가</span>
-              </span>
-            </button>
-          </li>
-          {projects.map(this.renderItem)}
-        </ul>
-      </div>
+      <ul className="list_project">
+        {this.renderAddItem()}
+        {projects.map(this.renderItem)}
+      </ul>
     )
   }
 }

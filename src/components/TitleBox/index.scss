@@ -1,0 +1,15 @@
+@import '../../assets/scss/base';
+
+.box_tit{
+  padding:10px;
+  .txt_tit{
+    padding-bottom:10px;
+    font-size:32px;
+    border-bottom:3px solid $lineColor;
+  }
+  .txt_desc{
+    padding:10px;
+    font-size:20px;
+    font-weight:300;
+  }
+}
