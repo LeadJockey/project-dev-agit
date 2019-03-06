@@ -10,9 +10,9 @@ class Test extends Component {
       <section className="app_section">
         <TitleBox {...korean.route.test} />
         <Counter />
-        <DelayLink to="/projects/1" delay={1000}>project 1</DelayLink>
+        <DelayLink to="/projects/1" delay={1000}>delay link test (1000ms)</DelayLink>
         <br/>
-        <DelayLink to="/work/1" delay={2000}>work 1</DelayLink>
+        <DelayLink to="/projects/2" delay={2000}>delay link test (2000ms)</DelayLink>
         {/* <LoadingScreen /> */}
       </section>
     )

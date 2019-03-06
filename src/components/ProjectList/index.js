@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 import { observer, inject } from 'mobx-react'
-
-import 'assets/scss/components/projectList.scss'
+import './index.scss'
 
 @inject(({ project, modal }) => ({
   add: project.add,
@@ -45,6 +44,19 @@ import 'assets/scss/components/projectList.scss'
     )
   }
 
+  renderAddItem = () => {
+    const { add } = this.props
+    return (
+      <li>
+        <button type="button" className="btn_add" onClick={() => { add() }}>
+          <span className="ti-plus test">
+            <span className="screen_out">추가</span>
+          </span>
+        </button>
+      </li>
+    )
+  }
+
   renderItem = ({ id, name, startDate, endDate, percent, state }) => {
     const routePath = `/projects/${id}`
     const { remove, open } = this.props
@@ -81,21 +93,12 @@ import 'assets/scss/components/projectList.scss'
   }
 
   render() {
-    const { add, projects } = this.props
+    const { projects } = this.props
     return (
-      <div className="comp_project">
-        <h2 className="tit_project">프로젝트 리스트</h2>
-        <ul className="list_project">
-          <li>
-            <button type="button" className="btn_add" onClick={() => { add() }}>
-              <span className="ti-plus test">
-                <span className="screen_out">추가</span>
-              </span>
-            </button>
-          </li>
-          {projects.map(this.renderItem)}
-        </ul>
-      </div>
+      <ul className="list_project">
+        {this.renderAddItem()}
+        {projects.map(this.renderItem)}
+      </ul>
     )
   }
 }
