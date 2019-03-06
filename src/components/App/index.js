@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { SizeContext } from 'util/context'
 import { Header, Aside, Nav } from 'layouts'
+import { Modal } from 'components'
 import { Routes } from 'routes'
 import './index.scss'
 
@@ -36,6 +37,7 @@ class App extends Component {
                 <Routes />
               </article>
             </main>
+            <Modal />
           </div>
         </SizeContext.Provider>
       </Router>
