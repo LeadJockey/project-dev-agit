@@ -25,4 +25,9 @@ $dark: #1a1c22;
 
 // size value
 $headerHeight:50px;
-$radius:37%;
+$frameRadius:4%;
+$thumbRadius:40%;
+
+// paht value
+$imgPath: '/images';
+$defaultPath: $imgPath + '/default'
