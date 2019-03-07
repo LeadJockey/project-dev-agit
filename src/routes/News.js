@@ -6,7 +6,7 @@ class News extends Component {
     return (
       <section className="app_section">
         <EmptyContent />
-        뉴스 만들래
+        테스트 해보자
         
       </section>
     )
