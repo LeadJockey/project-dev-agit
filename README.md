@@ -10,3 +10,11 @@
 
 ### font icon url
 `https://themify.me/themify-icons`
+
+
+### 파일구조
+
+### 컨벤션
+
+* css naming : 구분자 (_)
+* component > wrapper element classname : comp_{이름}_{서브}
