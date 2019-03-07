@@ -13,7 +13,8 @@ class Routes extends Component {
         <Route path={ROUTE_PATH.PROJECTS + '/:id'} exact />
         <Route path={ROUTE_PATH.WORKS} exact component={Page.Work} />
         <Route path={ROUTE_PATH.WORKS + '/:id'} exact />
-        <Route path={ROUTE_PATH.COUNTER} exact component={Page.Test} />
+        <Route path={ROUTE_PATH.TEST} exact component={Page.Test} />
+        <Route path={ROUTE_PATH.D3} exact component={Page.D3} />
         <Redirect to={ROUTE_PATH.INDEX} />
       </Switch>
     )

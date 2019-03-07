@@ -6,7 +6,8 @@ export const ROUTE_PATH = {
   HOME: '/home',
   PROJECTS: '/projects',
   WORKS: '/works',
-  TEST: '/test'
+  TEST: '/test',
+  D3: '/d3',
 }
 // animate frame per sec
 export const FPS = 1000 / 60 

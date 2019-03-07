@@ -15,6 +15,7 @@ class Nav extends Component {
           <li><Link to={ROUTE_PATH.PROJECTS} >PROJECTS</Link></li>
           <li><Link to={ROUTE_PATH.WORKS} >WORKS</Link></li>
           <li><Link to={ROUTE_PATH.TEST} >TEST</Link></li>
+          <li><Link to={ROUTE_PATH.D3} >D3</Link></li>
         </ul>
       </nav>
     )
