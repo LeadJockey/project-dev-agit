@@ -5,7 +5,8 @@ import * as d3 from "d3";
 
 class D3 extends Component {
 
-  dataset = [4, 8, 15, 16, 23, 42, 59, 64, 71, 83, 90, 95]
+  // dataset = [4, 8, 15, 16, 23, 42, 59, 64, 71, 83, 90, 95]
+  dataset = [4, 8, 15, 16, 95]
 
   componentDidMount() {
 

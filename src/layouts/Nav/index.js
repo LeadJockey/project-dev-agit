@@ -12,6 +12,8 @@ class Nav extends Component {
         <ul className="list_route">
           <li><Link to={ROUTE_PATH.INDEX} >INDEX</Link></li>
           <li><Link to={ROUTE_PATH.HOME} >HOME</Link></li>
+          <li><Link to={ROUTE_PATH.USERS} >USERS</Link></li>
+          <li><Link to={ROUTE_PATH.NEWS} >NEWS</Link></li>
           <li><Link to={ROUTE_PATH.PROJECTS} >PROJECTS</Link></li>
           <li><Link to={ROUTE_PATH.WORKS} >WORKS</Link></li>
           <li><Link to={ROUTE_PATH.TEST} >TEST</Link></li>

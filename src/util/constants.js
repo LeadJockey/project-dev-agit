@@ -4,6 +4,8 @@ export const CLIENT_ID = '558582794007-m5unl35bhe57kfdtrmebi4ek50bunpp4.apps.goo
 export const ROUTE_PATH = {
   INDEX: '/',
   HOME: '/home',
+  USERS: '/users',
+  NEWS: '/news',
   PROJECTS: '/projects',
   WORKS: '/works',
   TEST: '/test',
