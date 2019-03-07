@@ -33,12 +33,10 @@ class D3 extends Component {
 
   render() {
     return (
-      <>
-        <section className="app_section">
-          <TitleBox {...korean.route.d3} />
-          <div className="target" />
-        </section>
-      </>
+      <section className="app_section">
+        <TitleBox {...korean.route.d3} />
+        <div className="target" />
+      </section>
     )
   }
 }
