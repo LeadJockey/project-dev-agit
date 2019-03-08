@@ -4,7 +4,7 @@ import './index.scss'
 class EmptyContent extends Component {
   render() {
     return (
-      <div className="empty_cont">EMPTY CONTENT</div>
+      <div className="comp_empty_content">EMPTY CONTENT</div>
     )
   }
 }

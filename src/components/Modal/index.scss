@@ -1,4 +1,4 @@
-.comp_popup{
+.comp_modal{
   position:fixed;
   top:0;
   right:0;
@@ -12,7 +12,7 @@
     top:15%;
     right:20%;
   }
-  .content_popup{
+  .modal_cont{
     position: absolute;
     top:20%;
     left:20%;

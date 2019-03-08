@@ -10,3 +10,14 @@
 
 ### font icon url
 `https://themify.me/themify-icons`
+
+
+### 파일구조
+
+### 컨벤션
+
+* css naming : underscore case
+
+* component > return wrap element classname : comp_{이름}_{서브}
+
+* git commit massage : (CREATE | UPDATE | REMOVE | FIX | TEST) + (fileName | componentName | functionName)

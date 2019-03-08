@@ -95,10 +95,12 @@ import './index.scss'
   render() {
     const { projects } = this.props
     return (
-      <ul className="list_project">
-        {this.renderAddItem()}
-        {projects.map(this.renderItem)}
-      </ul>
+      <div className="comp_project_list">
+        <ul className="list_project">
+          {this.renderAddItem()}
+          {projects.map(this.renderItem)}
+        </ul>
+      </div>
     )
   }
 }

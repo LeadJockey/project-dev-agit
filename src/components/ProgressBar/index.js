@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
+import { FPS } from 'util/constants'
+
 import './index.scss'
 
 class ProgressBar extends Component {
+
+  movement = null
+
   bar = React.createRef()
 
   componentDidMount(){
@@ -9,15 +14,21 @@ class ProgressBar extends Component {
     this.moveProgressBar(percent);
   }
 
+  componentWillUnmount(){
+    if(this.movement){
+      this.movement = clearInterval(this.movement)
+    }
+  }
+
   moveProgressBar = (percent) => {
     let tick = 0;
-    let movement = setInterval(()=>{
+    this.movement = setInterval(()=>{
       if (tick >= percent) {
-        clearInterval(movement)
+        clearInterval(this.movement)
       }else{
         this.bar.style.width = `${tick += 1}%`
       }
-    }, 60)
+    }, FPS)
   }
 
   render() {

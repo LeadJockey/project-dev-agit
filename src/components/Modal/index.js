@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
-import 'assets/scss/components/popup.scss'
+import './index.scss'
 
 @inject(({ modal }) => ({
   isOpen: modal.modal.isOpen,
@@ -8,14 +8,14 @@ import 'assets/scss/components/popup.scss'
   close: modal.close
 }))
 
-@observer class Popup extends Component {
+@observer class Modal extends Component {
 
-  renderPopup = () => {
+  renderModal = () => {
     const { body, close } = this.props
     return (
-      <div className="comp_popup" onClick={() => { close() }}>
+      <div className="comp_modal" onClick={() => { close() }}>
         <button type="button" className="btn_close" onClick={() => { close() }}>X</button>
-        <div className="content_popup" onClick={(e) => { e.stopPropagation() }}>{body}</div>
+        <div className="modal_cont" onClick={(e) => { e.stopPropagation() }}>{body}</div>
       </div>
     )
   }
@@ -24,10 +24,10 @@ import 'assets/scss/components/popup.scss'
     const { isOpen } = this.props
     return (
       isOpen
-        ? this.renderPopup()
+        ? this.renderModal()
         : null
     )
   }
 }
 
-export default Popup
+export default Modal

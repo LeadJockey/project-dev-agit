@@ -25,7 +25,7 @@ class ProjectStore {
   }
 
   @action add = (name) => {
-    this.projects.push({
+    this.projects.unshift({
       id: id++,
       name: name || '프로젝트 주제',
       startDate: 'yyyy.MM.dd',
@@ -46,7 +46,6 @@ class ProjectStore {
       }
       return project
     })
-    console.log('projects', this.projects);
   }
 }
 

@@ -1,5 +1,9 @@
 {
   "route": {
+    "initial": {
+      "title": "INDEX",
+      "desc": "초기화면 입니다."
+    },
     "home": {
       "title": "HOME",
       "desc": "데브-아지트에 방문해 주셔서 감사합니다."
@@ -11,6 +15,14 @@
     "project": {
       "title": "PROJECT LIST",
       "desc": "프로젝트 목록 입니다."
+    },
+    "work":{
+      "title": "WORK LIST",
+      "desc": "개별프로젝트 내부 업무 목록 입니다."
+    },
+    "d3":{
+      "title": "D3 TEST",
+      "desc": "D3 데이터 시각화 적용 테스트"
     }
   }
 }
