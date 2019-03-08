@@ -1,15 +1,16 @@
 @import '../../assets/scss/base';
 
 .comp_title_box{
-  padding:10px;
+  margin:0 -60px;
+  padding:0 60px 60px;
+  border-bottom: 1px solid $borderColor;
   .txt_tit{
-    padding-bottom:10px;
-    font-size:32px;
-    border-bottom:3px solid $lineColor;
+    margin-bottom:16px;
+    font-weight: normal;
+    font-size:34px;
   }
   .txt_desc{
-    padding:10px;
-    font-size:20px;
-    font-weight:300;
+    display: block;
+    font-size:15px;   
   }
 }

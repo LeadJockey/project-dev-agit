@@ -1,17 +1,31 @@
 @import '../../assets/scss/base';
 .app_nav{
   position:fixed;
-  top:$headerHeight;
+  top:0;
   left:0;
   bottom:0;
-  width:15%;
+  width:240px;
   height:100%;
-  padding:50px;
+  padding:115px 24px;
   box-sizing:border-box;
-  background-color:$gray-dark;
+  background-color:$dark2;
   .list_route{
+    [class^="ti"]{
+      margin-right: 10px;
+    }
     > li{
+      margin-bottom: 10px;
       padding:10px;
+      &:first-child{
+        a{
+          opacity: .5;
+        }
+      }
+      a{
+        font-weight: 400;
+        font-size: 18px;
+        color: #fff;
+      }
     }
   }
 }
