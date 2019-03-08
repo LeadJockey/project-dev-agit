@@ -7,7 +7,7 @@ class News extends Component {
       <section className="app_section">
         <EmptyContent />
         테스트 해보자
-        
+            
       </section>
     )
   }
