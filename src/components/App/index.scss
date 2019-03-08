@@ -1,18 +1,12 @@
 @import '../../assets/scss/base';
-.app_wrapper{
-
-}
-
 .app_main{
-  overflow:hidden;
-  width:70%;
+  overflow:hidden;  
   min-width:900px;
   min-height:100vh;
-  margin:0 auto;
-  padding-top:$headerHeight;
+  margin-left: 240px;
+  padding:100px 40px;  
   .app_content{
-    height:100%;
-    padding:10px;
+    @include comm_box($height:100%, $padding:60px 60px)
   }
   .app_section{
     padding-bottom:10px;
