@@ -35,8 +35,11 @@ npm i
 sudo vi /etc/hosts
 
 -- add localhost alias ( for goole login : must need domain name / not IP)
-  0.0.0.0       local.dev.agit.com 
+    0.0.0.0       local.dev.agit.com 
 (or 127.0.0.1     local.dev.agit.com)
+
+-- start dev server
+npm start
 ```
 
 ## Directory Structure

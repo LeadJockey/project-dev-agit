@@ -3,6 +3,7 @@
 .comp_progress_bar{
   position: relative;
   height: 20px;
+  margin-top: 20px;
   background-color:$gray-dark;
   .bar_progress{
     position:absolute;
@@ -15,8 +16,9 @@
   .txt_progress{
     position:absolute;
     top:0;
-    left:0;
+    left:10px;
     color:$white;
+    font-size: 13px;
     line-height:20px;
     text-align:right;
   }
