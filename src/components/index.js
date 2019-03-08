@@ -7,6 +7,7 @@ import ProgressBarComp from './ProgressBar'
 import ModalComp from './Modal'
 import DelayLinkComp from './DelayLink'
 import LoadingScreenComp from './LoadingScreen'
+// import LoginComp from './Login'
 
 export const App = AppComp
 export const Counter = CounterComp
@@ -17,3 +18,4 @@ export const ProgressBar = ProgressBarComp
 export const Modal = ModalComp
 export const DelayLink = DelayLinkComp
 export const LoadingScreen = LoadingScreenComp
+// export const Login = LoginComp
