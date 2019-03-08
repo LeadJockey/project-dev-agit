@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ROUTE_PATH } from 'util/constants'
 import './index.scss'
 import logo from '../../assets/images/logo.png'
+import Login from '../../components/Login/Login'
 
 class Header extends Component {
   render () {
@@ -14,6 +15,7 @@ class Header extends Component {
             <strong className='app_tit'>Dev-agit</strong>
           </Link>
         </h1>
+        <Login />
       </header>
     )
   }

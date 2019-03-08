@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 
-const defaultImg =
-  'http://image.chosun.com/sitedata/image/201810/01/2018100103196_0.jpg'
-
 const userInfo = (key, value) => {
   return sessionStorage[key] ? sessionStorage[key] : value
 }

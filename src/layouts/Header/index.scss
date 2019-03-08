@@ -6,6 +6,7 @@
   left:0;
   right:0;
   height:65px;
+  padding-right:25px;
   background-color:$bgColor;
   z-index:1000;
   border-bottom:1px solid $borderColor;
@@ -15,7 +16,7 @@
     float: left;
     width: 240px;
     height: 65px;
-    padding-left:24px;
+    padding-left:25px;
     border-bottom: 1px solid $borderColor;
     line-height: 65px;
     background: $dark2;
