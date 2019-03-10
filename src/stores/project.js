@@ -5,7 +5,7 @@ let id = 4
 
 class ProjectApi {
   //fetchProject = ()=> request.get('/api')
-  fetchProjects = () => PROJECTS
+  fetch = () => PROJECTS
 }
 
 class ProjectStore {
@@ -14,11 +14,11 @@ class ProjectStore {
   constructor(root) {
     this.root = root
     this.api = new ProjectApi()
-    this.fetchTodos()
+    this.fetchProjects()
   }
 
-  fetchTodos = async () => {
-    const projects = await this.api.fetchProjects()
+  fetchProjects = async () => {
+    const projects = await this.api.fetch()
     runInAction(() => {
       this.projects = projects
     });
