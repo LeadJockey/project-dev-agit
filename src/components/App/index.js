@@ -25,7 +25,7 @@ class App extends Component {
   }
 
   render() {
-    const { width, height, languageType } = this.state
+    const { width, height } = this.state
     return (
       <Router>
         <SizeContext.Provider value={{ width, height }}>
@@ -37,6 +37,7 @@ class App extends Component {
                 <Routes />
               </article>
             </main>
+            <Aside />
             <Modal />
           </div>
         </SizeContext.Provider>

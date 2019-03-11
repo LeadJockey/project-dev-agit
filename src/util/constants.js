@@ -22,6 +22,9 @@ export const ROUTE_ICON = {
   USERS: 'ti-user',
   NEWS: 'ti-world',
   PROJECTS: 'ti-package',
+  MEMBERS:'ti-user',
+  TASKS:'ti-target',
+  ANALYSIS:'ti-bar-chart-alt',
   WORKS: 'ti-target',
   TEST: 'ti-rocket',
   D3: 'ti-bar-chart'
