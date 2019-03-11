@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
-import { TitleBox, EmptyContent } from 'components'
+import { TitleBox } from 'components'
 import { korean } from 'languages'
 
 class Work extends Component {
-  render() {
+  render () {
     return (
       <>
-        <section className="app_section">
+        <section className='app_section'>
           <TitleBox {...korean.route.work} />
         </section>
-        <section className="app_section">
-          <EmptyContent />
-        </section>
+        <section className='app_section' />
       </>
     )
   }
