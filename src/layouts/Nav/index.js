@@ -2,7 +2,15 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { ROUTE_PATH, ROUTE_ICON } from 'util/constants'
 import './index.scss'
+import { observer, inject } from 'mobx-react'
 
+@inject(({ login }) => ({
+  authenticate: login.authenticate,
+  userToken: login.userToken,
+  loginAction: login.loginAction,
+  logoutAction: login.logoutAction
+}))
+@observer
 class Nav extends Component {
   render () {
     return (
