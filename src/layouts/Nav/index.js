@@ -42,6 +42,26 @@ class Nav extends Component {
               <i className={ROUTE_ICON.PROJECTS} />
               PROJECTS
             </Link>
+            <ul className="list_project">
+              <li>
+                <Link to={ROUTE_PATH.MEMBERS}>
+                  <i className={ROUTE_ICON.PROJECTS} />
+                  MEMBERS
+                </Link>
+              </li>
+              <li>
+                <Link to={ROUTE_PATH.TASKS}>
+                  <i className={ROUTE_ICON.PROJECTS} />
+                  TASKS
+                </Link>
+              </li>
+              <li>
+                <Link to={ROUTE_PATH.ANALYSIS}>
+                  <i className={ROUTE_ICON.PROJECTS} />
+                  ANALYSIS
+                </Link>
+              </li>
+            </ul>
           </li>
           <li>
             <Link to={ROUTE_PATH.WORKS}>

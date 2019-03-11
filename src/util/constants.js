@@ -9,6 +9,9 @@ export const ROUTE_PATH = {
   USERS: '/users',
   NEWS: '/news',
   PROJECTS: '/projects',
+  MEMBERS:'/project/:id/members',
+  TASKS:'/project/:id/tasks',
+  ANALYSIS:'/project/:id/analysis',
   WORKS: '/works',
   TEST: '/test',
   D3: '/d3'
