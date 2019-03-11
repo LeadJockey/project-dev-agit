@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { TitleBox } from 'components'
+import { WorkList, TitleBox } from 'components'
 import { korean } from 'languages'
 
 class Work extends Component {
@@ -8,6 +8,7 @@ class Work extends Component {
       <>
         <section className='app_section'>
           <TitleBox {...korean.route.work} />
+          <WorkList />
         </section>
         <section className='app_section' />
       </>

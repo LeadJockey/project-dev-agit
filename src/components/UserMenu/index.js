@@ -2,11 +2,9 @@ import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 import { GoogleLogin, GoogleLogout } from 'react-google-login'
 import { CLIENT_ID } from '../../util/constants'
-
 import './index.scss'
 
-const defaultImg =
-  'http://image.chosun.com/sitedata/image/201810/01/2018100103196_0.jpg'
+import defaultImg from '../../assets/images/default_user.png'
 
 @inject(({ login }) => ({
   authenticate: login.authenticate,
@@ -32,7 +30,7 @@ class Login extends Component {
   }
 
   render () {
-    const { authenticate, userToken, userImg } = this.props
+    const { authenticate, userImg } = this.props
 
     return (
       <div className='login_comp'>
@@ -42,9 +40,11 @@ class Login extends Component {
             onSuccess={this.authentication}
             onFailure={this.authenticationFail}
             render={renderProps => (
-              <button className='btn_login' onClick={renderProps.onClick}>
-                <img src={defaultImg} className='user_img' />
-              </button>
+              <div className='default_profile' onClick={renderProps.onClick}>
+                <picture className='profile_img'>
+                  <img src={defaultImg} className='user_img' />
+                </picture>
+              </div>
             )}
           />
         ) : (
