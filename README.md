@@ -42,6 +42,10 @@ sudo vi /etc/hosts
 npm start
 ```
 
+## netlify
+
+
+
 ## Directory Structure
 ```code
   public
