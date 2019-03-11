@@ -50,11 +50,14 @@ import './index.scss'
     return (
       <li>
         <div className="card_project">
-          <button type="button" className="btn_add" onClick={() => { add() }}>
-            <span className="ti-plus test">
+          <div className="card_cont">
+            <strong className="tit_cont">프로젝트 생성</strong>
+          </div>
+          <div className="group_btn">
+            <button type="button" className="ti-plus btn_add" onClick={() => { add() }}>
               <span className="screen_out">추가</span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
       </li>
     )
@@ -64,17 +67,25 @@ import './index.scss'
     const routePath = `/projects/${id}`
     const { remove, open } = this.props
     const updateBody = this.getUpdateItemBody({ id, name, startDate, endDate, percent, state })
+    const stateMap = {
+      '완료': 'done',
+      '진행중': 'doing',
+      '예정': 'todo'
+    }
     return (
       <li key={id}>
         <div className="card_project">
           <Link to={routePath} className="link_project">
-            <span className="txt_state done">{state}</span>
+            <div className={`card_state ${stateMap[state]}`}>
+              <span className="txt_state">{state}</span>
+            </div>
+            <div className="card_percent">
+              <ProgressBar percent={percent} />
+            </div>
             <div className="card_cont">
               <strong className="tit_cont">{name}</strong>
               <span className="txt_info">{startDate} ~ {endDate}</span>
-              
             </div>
-            {/* <ProgressBar percent={percent} /> */}
           </Link>
         </div>
         <div className="group_btn">

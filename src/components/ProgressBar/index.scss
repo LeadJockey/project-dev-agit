@@ -1,9 +1,9 @@
 @import '../../assets/scss/base';
 
 .comp_progress_bar{
+  overflow: hidden;
   position: relative;
-  height: 20px;
-  margin-top: 20px;
+  height: 100%;
   background-color:$gray-dark;
   .bar_progress{
     position:absolute;
@@ -11,15 +11,17 @@
     left:0;
     width:0;
     height:100%;
-    background-color:$pink;
+    background-color:$primary;
   }
   .txt_progress{
     position:absolute;
     top:0;
-    left:10px;
+    left:0;
+    right:0;
+    bottom:0;
     color:$white;
-    font-size: 13px;
-    line-height:20px;
-    text-align:right;
+    font-size: 12px;
+    line-height:14px;
+    text-align:center;
   }
 }
