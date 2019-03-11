@@ -10,6 +10,7 @@ class ProjectApi {
 
 class ProjectStore {
   @observable projects = []
+  @observable state = 'pendding'
 
   constructor(root) {
     this.root = root
@@ -17,12 +18,25 @@ class ProjectStore {
     this.fetchProjects()
   }
 
-  fetchProjects = async () => {
-    const projects = await this.api.fetch()
-    runInAction(() => {
-      this.projects = projects
-    });
+  @action fetchProjects = async () => {
+    this.projects = []
+    this.state = 'pending'
+    try {
+      this.fetchProjectsSuccess(await this.api.fetch())
+    } catch (error) {
+      this.fetchProjectsError(error)
+    }
   }
+
+  @action.bound fetchProjectsSuccess(projects) {
+    this.projects = projects
+    this.state = "done"
+  }
+
+  @action.bound fetchProjectsError(error) {
+    this.state = 'error'
+  }
+
 
   @action add = (name) => {
     this.projects.unshift({
@@ -36,12 +50,12 @@ class ProjectStore {
   }
 
   @action remove = (id) => {
-    this.projects = this.projects.filter((project)=> project.id !== id)
+    this.projects = this.projects.filter((project) => project.id !== id)
   }
 
   @action update = (updatedProject) => {
     this.projects = this.projects.map((project) => {
-      if(project.id === updatedProject.id){
+      if (project.id === updatedProject.id) {
         return Object.assign(project, updatedProject)
       }
       return project
