@@ -1,4 +1,4 @@
-import { observable, action, runInAction, computed } from 'mobx'
+import { observable, action } from 'mobx'
 import RESOURCE from 'api/v1/resources.json'
 
 class ResourceApi {

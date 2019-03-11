@@ -1,4 +1,4 @@
-import { observable, action, runInAction } from 'mobx'
+import { observable, action } from 'mobx'
 import PROJECTS from 'api/v1/projects.json'
 
 let id = 4

@@ -9,6 +9,7 @@ import DelayLinkComp from './DelayLink'
 import LoadingScreenComp from './LoadingScreen'
 import WorkListComp from './WorkList'
 import LoginComp from './Login'
+import UserMenuComp from './UserMenu'
 
 export const App = AppComp
 export const Counter = CounterComp
@@ -21,3 +22,4 @@ export const DelayLink = DelayLinkComp
 export const LoadingScreen = LoadingScreenComp
 export const WorkList = WorkListComp
 export const Login = LoginComp
+export const UserMenu = UserMenuComp

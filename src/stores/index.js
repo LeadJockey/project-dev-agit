@@ -3,6 +3,7 @@ import ProjectStore from './project'
 import ModalStore from './modal'
 import LoginStore from './login'
 import ResourceStore from './resource'
+import NavStore from './nav'
 
 class RootStore {
   constructor () {
@@ -11,6 +12,7 @@ class RootStore {
     this.modal = new ModalStore(this)
     this.login = new LoginStore(this)
     this.resource = new ResourceStore(this)
+    this.nav = new NavStore(this)
   }
 }
 

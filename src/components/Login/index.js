@@ -29,6 +29,10 @@ class Login extends Component {
     logoutAction()
   }
 
+  join = () => {
+    alert('힝! 속았지? 그딴거 없어')
+  }
+
   render () {
     const { authenticate, userToken, userImg } = this.props
 
@@ -40,10 +44,23 @@ class Login extends Component {
             onSuccess={this.authentication}
             onFailure={this.authenticationFail}
             render={renderProps => (
-              <div className='default_profile' onClick={renderProps.onClick}>
-                <picture className='profile_img'>
-                  <img src={defaultImg} className='user_img' />
-                </picture>
+              <div className='default_profile'>
+                <div className='wrap_util'>
+                  <a
+                    href='javascript:;'
+                    className='btn_util'
+                    onClick={this.join}
+                  >
+                    회원가입
+                  </a>
+                  <a
+                    href='javascript:;'
+                    className='btn_util'
+                    onClick={renderProps.onClick}
+                  >
+                    로그인
+                  </a>
+                </div>
               </div>
             )}
           />

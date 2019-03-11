@@ -1,31 +1,16 @@
 @import '../../assets/scss/base';
-.btn_login{
-  overflow: hidden;
-  width:60px;
-  height: 60px;
-  border-radius: 50%;
-  border:none;
-  padding:0;
-  img{
-    display: block;
-    width:100%;
-  }
-}
+
 .login_comp{
-  .default_profile{
-    .profile_img{
+  .btn_login{
+    overflow: hidden;
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    border:none;
+    padding:0;
+    img{
       display: block;
-      overflow: hidden;
-      width:100px;
-      height: 100px;
-      margin: auto;
-      border-radius: 50%;
-      border:1px solid #6A6E7C;
-      img{
-        display: block;
-        width: 80%;
-        margin: 20px auto;
-      }
+      width:100%;
     }
   }
 }
