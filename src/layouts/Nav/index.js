@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { ROUTE_PATH, ROUTE_ICON } from 'util/constants'
+import { ROUTE_PATH } from 'util/constants'
 import './index.scss'
 import { observer, inject } from 'mobx-react'
 
@@ -8,17 +8,21 @@ import { observer, inject } from 'mobx-react'
   authenticate: login.authenticate,
   userToken: login.userToken,
   loginAction: login.loginAction,
-  logoutAction: login.logoutAction
+  logoutAction: login.logoutAction,
 }))
+
 @observer class Nav extends Component {
 
   renderItem = (routeName) => {
+    const routeObj = ROUTE_PATH[routeName]
+    if (!routeObj) return null
+    const { path, icon } = routeObj
     return (
       <li key={routeName}>
-        <Link to={ROUTE_PATH[routeName]}>
+        <Link to={path} >
           {
-            ROUTE_ICON[routeName]
-              ? <i className={ROUTE_ICON[routeName]} />
+            icon
+              ? <i className={icon} />
               : null
           }
           {routeName}
@@ -31,7 +35,9 @@ import { observer, inject } from 'mobx-react'
     return (
       <nav className='app_nav'>
         <ul className='list_route'>
-          {Object.keys(ROUTE_PATH).map(this.renderItem)}
+          {this.renderItem('INDEX')}
+          {this.renderItem('PROJECTS')}
+          {this.renderItem('NEWS')}
         </ul>
       </nav>
     )

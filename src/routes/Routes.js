@@ -4,22 +4,34 @@ import { ROUTE_PATH } from 'util/constants'
 import * as Page from 'routes'
 
 class Routes extends Component {
+  getRouteChidrenPath = (routeObj, pathName) => {
+    const { path, children } = routeObj
+    const res = path + `/:id` + children[pathName].path
+    return res
+  }
+
   render() {
+    console.log('d', ROUTE_PATH.PROJECTS.path + '/:id' + ROUTE_PATH.PROJECTS.children.WORKS.path);
+    
     return (
       <Switch>
-        <Route path={ROUTE_PATH.INDEX} exact component={Page.Initial}/>
-        <Route path={ROUTE_PATH.HOME} exact component={Page.Home} />
-        <Route path={ROUTE_PATH.USERS} exact component={Page.User} />
-        <Route path={ROUTE_PATH.USERS + '/:id'} exact />
-        <Route path={ROUTE_PATH.NEWS} exact component={Page.News} />
-        <Route path={ROUTE_PATH.NEWS + '/:id'} exact />
-        <Route path={ROUTE_PATH.PROJECTS} exact component={Page.Project} />
-        <Route path={ROUTE_PATH.PROJECTS + '/:id'} exact />
-        <Route path={ROUTE_PATH.WORKS} exact component={Page.Work} />
-        <Route path={ROUTE_PATH.WORKS + '/:id'} exact />
-        <Route path={ROUTE_PATH.TEST} exact component={Page.Test} />
-        <Route path={ROUTE_PATH.D3} exact component={Page.D3} />
-        <Redirect to={ROUTE_PATH.INDEX} />
+        <Route path={ROUTE_PATH.INDEX.path} exact component={Page.Initial} />
+        <Route path={ROUTE_PATH.HOME.path} exact component={Page.Home} />
+
+        <Route path={ROUTE_PATH.NEWS.path} exact component={Page.News} />
+        <Route path={ROUTE_PATH.NEWS.path + '/:id'} exact />
+
+        <Route path={ROUTE_PATH.PROJECTS.path} exact component={Page.Project} />
+        <Route path={ROUTE_PATH.PROJECTS.path + '/:id'} exact component={Page.ProjectDetail} />
+
+        <Route path={this.getRouteChidrenPath(ROUTE_PATH.PROJECTS, 'WORKS')} exact component={Page.Work} />
+        <Route path={this.getRouteChidrenPath(ROUTE_PATH.PROJECTS, 'MEMBERS')} exact component={Page.Member} />
+        <Route path={this.getRouteChidrenPath(ROUTE_PATH.PROJECTS, 'ANALYSIS')} exact component={Page.D3}/>
+
+        <Route path={ROUTE_PATH.TEST.path} exact component={Page.Test} />
+        <Route path={ROUTE_PATH.D3.path} exact component={Page.D3} />
+
+        <Redirect to={ROUTE_PATH.INDEX.path} />
       </Switch>
     )
   }

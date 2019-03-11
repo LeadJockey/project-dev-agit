@@ -1,23 +1,14 @@
 import { observable, action } from 'mobx'
 
 class NavStore {
-  @observable modal = {
-    isOpen:false,
-    body:null
-  }
+  @observable projectId = 0
 
   constructor(root) {
     this.root = root
   }
 
-  @action open = (body) => {
-    this.modal.isOpen = true
-    this.modal.body = body
-  }
-
-  @action close = () => {
-    this.modal.isOpen = false
-    this.modal.body = null
+  @action.bound setProjectId = (projectId) => {
+    this.projectId = projectId
   }
 }
 
