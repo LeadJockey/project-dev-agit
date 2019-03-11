@@ -68,16 +68,13 @@ import './index.scss'
       <li key={id}>
         <div className="card_project">
           <Link to={routePath} className="link_project">
-            <div className="card_bg" />
-            <picture className="card_img">
-              <img src="https://dummyimage.com/100x100/ffffff/333333" className="img_thumb" />
-            </picture>
+            <span className="txt_state done">{state}</span>
             <div className="card_cont">
               <strong className="tit_cont">{name}</strong>
               <span className="txt_info">{startDate} ~ {endDate}</span>
-              <span className="txt_info">상태 : {state}</span>
-              <ProgressBar percent={percent} />
+              
             </div>
+            {/* <ProgressBar percent={percent} /> */}
           </Link>
         </div>
         <div className="group_btn">

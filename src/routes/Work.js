@@ -9,7 +9,12 @@ class Work extends Component {
         <section className='app_section'>
           <TitleBox {...korean.route.work} />
         </section>
-        <section className='app_section' />
+        <section className='app_section' >
+          워크리스트 랜딩
+        </section>
+        <section className='app_section' >
+          선택된 워크 디테일 랜딩
+        </section>
       </>
     )
   }
