@@ -23,7 +23,7 @@ class Login extends Component {
   }
 
   authenticationFail = () => {
-    alert('인증실패 다시 해')
+    // alert('인증실패 다시 해')
   }
 
   logout = () => {
