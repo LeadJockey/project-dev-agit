@@ -5,11 +5,10 @@
   min-height:100vh;
   margin-left: 240px;
   padding:100px 40px;  
-  .app_content{
-    @include comm_box($height:100%, $padding:60px 60px)
-  }
+
   .app_section{
-    padding-bottom:10px;
+    @include comm_box($height:100%, $padding:60px 60px);
+    margin-bottom:50px;
   }
 }
 
