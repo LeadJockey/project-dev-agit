@@ -2,107 +2,50 @@
 
 .comp_project_list{
   padding-top: 48px;
+  
   .list_project{
-    overflow: hidden;
-    margin:0 -12px;
-    > li {
-      position:relative;
-      float:left;
-      width:305px;
-      height: 324px;;
-      padding:12px;
+    > li{
+      position: relative;
+      margin-bottom:10px;
+      border:1px solid gray;
+    }
+    li:hover{
+      background-color:gray;
+    }
+    .card_project{
+      height:50px;
+      // background-color:gold;
+      .txt_state{
+        display:block;
+        height:100%;
+        width:2%;
+        color:#fff;
+      }
+      .done{
+        background-color:green;
+      }
+      .doing{
+        background-color:gold;
+      }
+      .todo{
+        background-color:red;
+      }
     }
     .link_project{
       display:block;
       height:100%;
     }
-    .card_project{
-      overflow:hidden;
-      height:100%;
-      border-radius:$frameRadius;
-      background: $bgColor;
-      box-sizing:border-box;
-      .card_bg{
-        height:120px;
-        background-image:url($defaultPath + '/default_card_bg.png');
-      }
-      // .card_img{
-      //   overflow:hidden;
-      //   position:absolute;
-      //   top:40px;
-      //   left:40px;
-      //   width:100px;
-      //   height:100px;
-      //   border:1px solid $lineColor;
-      //   border-radius:$thumbRadius;
-      //   box-sizing:border-box;
-      // }
-      .card_img{
-        overflow:hidden;
-        position:absolute;
-        top:105px;
-        left:40px;
-        width:50px;
-        height:50px;
-        border-radius:$thumbRadius;
-      }      
-      .card_cont{
-        // padding:20px;    
-        padding:40px 30px 30px;
-        .tit_cont{
-          display:block;
-          margin-bottom: 15px;
-          // padding:10px 0;
-          color:$white;
-          // font-size:28px;
-          font-weight: normal;
-          font-size:22px;
-        }
-        .txt_info{
-          display:block;
-          margin-bottom: 5px;          
-          color:$light;
-        }
-      }
-      .btn_add{
-        display: block;
-        position: relative;
-        width:60px;
-        height:60px;
-        margin:120px auto;
-        font-size: 30px;               
-        border:1px solid $lineColor;
-        border-radius:$thumbRadius;
-        line-height: 60px;
-        color: $danger;    
-        @include transitionEase($easeInOutExpo , .5s);
-        &:hover{
-          transform: rotate(360deg)
-        }     
-      }
-    }
     .group_btn{
       position:absolute;
-      top:20px;
-      right:20px;
+      top:10px;
+      right:10px;
       > button{
         width:30px;
         height:30px;
-        color:$white;
-        font-weight:600;
-        // border:1px solid $lineColor;
-        border: none;
-        font-size: 15px;
-        border-radius:$thumbRadius;
+        border-radius:37%;
       }
       button + button {
-        margin-left:10px;
-      }
-      .btn_update{
-        background-color:$cyan;
-      }
-      .btn_remove{
-        background-color:$red;
+        margin-left: 10px;
       }
     }
   }

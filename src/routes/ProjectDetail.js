@@ -25,9 +25,16 @@ class ProjectDetail extends Component {
         </section>
         <section className="app_section">
           <TitleBox {...korean.route.projectDetail} />
+          기본정보 랜딩
         </section>
         <section className="app_section">
-
+          차트 랜딩
+        </section>
+        <section className="app_section">
+          맴버리스트 랜딩
+        </section>
+        <section className="app_section">
+          워크리스트 랜딩
         </section>
       </>
     )
