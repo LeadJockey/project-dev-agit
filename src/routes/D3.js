@@ -1,7 +1,29 @@
 import React, { Component } from 'react'
 import { TitleBox } from 'components'
 import { korean } from 'languages'
-import { Doughnut, Radar } from 'react-chartjs-2'
+import { defaults, Line, Bar, Doughnut, Radar } from 'react-chartjs-2'
+import { merge } from 'lodash'
+
+merge(defaults, {
+  global: {
+    title: {
+      display: true,
+      position: 'bottom',
+      text: 'Chart Title',
+      fontColor: '#fff',
+    },
+    legend: {
+      position: 'bottom',
+      labels: {
+        fontColor: '#fff',
+      },
+    },
+    animation: {
+      duration: 750,
+      easing: 'easeOutQuint',
+    },
+  },
+})
 
 const donut = {
   data: {
@@ -13,77 +35,44 @@ const donut = {
       backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
       hoverBackgroundColor: ['#e83e8c', '#007bff', '#ffc107'],
     }]
-  },
-  options: {
-    cutoutPercentage: 70,
-    rotation: -0.5 * Math.PI,
-    circumference: 1.75 * Math.PI,
-    animation: {
-      duration: 3000,
-      easing: 'easeOutQuint',
-      animateRotate: true,
-      animateScale: false,
-      onProgress: null,
-      onComplete: null,
-    },
-    title: {
-      display: true,
-      position: 'bottom',
-      text: 'Custom Chart Title',
-      fontColor: '#fff',
-
-    },
-    legend: {
-      position: 'bottom',
-      labels: {
-        fontColor: '#fff'
-      }
-    },
   }
 }
 
 const rader = {
   data: {
-    labels: ['JS', 'CSS', 'HTML', 'TIME', 'DOCS', 'SIDE', 'RELATION'],
+    labels: ['JS', 'CSS', 'HTML', 'TIME', 'DOCS', 'SIDE'],
     datasets: [
       {
         label: '나의 수치',
-        backgroundColor: 'rgba(179,181,198,0.2)',
-        pointBackgroundColor: 'rgba(179,181,198,1)',
-        pointHoverBackgroundColor: 'red',
-        pointStyle:'rectRot',
-        data: [60, 62, 68, 61, 62, 67, 68]
+        backgroundColor: 'rgba(25, 151, 198, 0.1)',
+        borderColor: 'rgba(25, 151, 198, 0.3)',
+        pointRadius: 6,
+        pointBackgroundColor: '#1997c6',
+        pointHoverBackgroundColor: '#1997c6',
+        pointStyle: 'rectRot',
+        data: [90, 43, 88, 77, 34, 55],
       },
       {
         label: '평균 수치',
-        backgroundColor: 'rgba(255,99,132,0.2)',
-        pointBackgroundColor: 'rgba(255,99,132,1)',
-        pointHoverBackgroundColor: '#fff',
-        pointStyle:'rectRot',
-        data: [90, 70, 70, 70, 50, 80, 90]
-      }
+        backgroundColor: 'rgba(232, 62, 197, 0.1)',
+        borderColor: 'rgba(232, 62, 197, 0.3)',
+        pointRadius: 6,
+        pointBackgroundColor: '#e83ec5',
+        pointHoverBackgroundColor: '#e83ec5',
+        pointStyle: 'rectRot',
+        data: [60, 60, 60, 60, 60, 60],
+      },
+
     ]
   },
   options: {
-    animation: {
-      duration: 3000,
-      easing: 'easeOutQuint',
-      animateRotate: true,
-      animateScale: false,
-      onProgress: null,
-      onComplete: null,
-    },
-    title: {
-      display: true,
-      position: 'bottom',
-      text: 'Custom Chart Title',
-      fontColor: '#fff',
-
-    },
-    legend: {
-      position: 'bottom',
-      labels: {
-        fontColor: '#fff'
+    scale: {
+      gridLines: {
+        color: "rgba(255, 255, 255, 0.1)",
+        lineWidth: 1
+      },
+      pointLabels: {
+        fontColor: "#fff"
       }
     },
   }

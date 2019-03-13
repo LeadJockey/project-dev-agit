@@ -10,7 +10,8 @@ import './index.scss'
   update: project.update,
   projects: project.projects,
   open: modal.open,
-  close: modal.close
+  close: modal.close,
+  getOne: project.getOne
 }))
 
 @observer class ProjectList extends Component {
@@ -19,7 +20,7 @@ import './index.scss'
   endDateEl = React.createRef()
   percentEl = React.createRef()
   stateEl = React.createRef()
-
+  
   getUpdateItemBody = ({ id, name, startDate, endDate, percent, state }) => {
     const { update, close } = this.props
     const updateThenClose = () => {
