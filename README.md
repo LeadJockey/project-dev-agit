@@ -67,7 +67,7 @@ npm start
 ## References
 * [dev-agit git repository](https://github.com/LeadJockey/project-dev-agit)
 * [font icon :themify](https://themify.me/themify-icons)
-* [anitmation/chart : d3 docs](https://github.com/d3/d3/wiki)
+* [anitmation/chart : chart.js](https://www.chartjs.org/docs/latest/general/fonts.html)
 * [authentication : react-google-login](https://www.npmjs.com/package/react-google-login)
 
 

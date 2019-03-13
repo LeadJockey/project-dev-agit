@@ -1,5 +1,8 @@
 {
   "route": {
+    "buttons":{
+      "add":"추가"
+    },
     "initial": {
       "title": "INDEX",
       "desc": "초기화면 입니다."

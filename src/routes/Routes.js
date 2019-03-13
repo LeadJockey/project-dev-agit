@@ -11,8 +11,6 @@ class Routes extends Component {
   }
 
   render() {
-    console.log('d', ROUTE_PATH.PROJECTS.path + '/:id' + ROUTE_PATH.PROJECTS.children.WORKS.path);
-    
     return (
       <Switch>
         <Route path={ROUTE_PATH.INDEX.path} exact component={Page.Initial} />
@@ -28,8 +26,8 @@ class Routes extends Component {
         <Route path={this.getRouteChidrenPath(ROUTE_PATH.PROJECTS, 'MEMBERS')} exact component={Page.Member} />
         <Route path={this.getRouteChidrenPath(ROUTE_PATH.PROJECTS, 'ANALYSIS')} exact component={Page.D3}/>
 
-        <Route path={ROUTE_PATH.TEST.path} exact component={Page.Test} />
-        <Route path={ROUTE_PATH.D3.path} exact component={Page.D3} />
+        {/* <Route path={ROUTE_PATH.TEST.path} exact component={Page.Test} /> */}
+        {/* <Route path={ROUTE_PATH.D3.path} exact component={Page.D3} /> */}
 
         <Redirect to={ROUTE_PATH.INDEX.path} />
       </Switch>
