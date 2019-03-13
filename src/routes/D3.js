@@ -93,7 +93,10 @@ class D3 extends Component {
           <Radar {...rader} />
         </section>
         <section className="app_section">
-          {/* <Doughnut {...donut} /> */}
+          line chart
+        </section>
+        <section className="app_section">
+          bar chart
         </section>
       </>
     )
