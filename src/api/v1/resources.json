@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "shawn",
+    "point": 480
+  },
+  {
+    "id": 2,
+    "name": "bard",
+    "point": 300
+  },
+  {
+    "id": 3,
+    "name": "edward",
+    "point": 120
+  },
+  {
+    "id": 4,
+    "name": "del",
+    "point": 222
+  },
+  {
+    "id": 5,
+    "name": "kerry",
+    "point": 600
+  },
+  {
+    "id": 6,
+    "name": "levi",
+    "point": 480
+  },
+  {
+    "id": 7,
+    "name": "rich",
+    "point": 57
+  },
+  {
+    "id": 8,
+    "name": "lukas",
+    "point": 312
+  },
+  {
+    "id": 9,
+    "name": "nomad",
+    "point": 200
+  },
+  {
+    "id": 10,
+    "name": "hue",
+    "point": 333
+  }
+]

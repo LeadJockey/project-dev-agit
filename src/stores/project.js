@@ -1,28 +1,42 @@
-import { observable, action, runInAction } from 'mobx'
+import { observable, action } from 'mobx'
 import PROJECTS from 'api/v1/projects.json'
 
 let id = 4
 
 class ProjectApi {
   //fetchProject = ()=> request.get('/api')
-  fetchProjects = () => PROJECTS
+  fetch = () => PROJECTS
 }
 
 class ProjectStore {
   @observable projects = []
+  @observable state = 'pendding'
 
   constructor(root) {
     this.root = root
     this.api = new ProjectApi()
-    this.fetchTodos()
+    this.fetchProjects()
   }
 
-  fetchTodos = async () => {
-    const projects = await this.api.fetchProjects()
-    runInAction(() => {
-      this.projects = projects
-    });
+  @action fetchProjects = async () => {
+    this.projects = []
+    this.state = 'pending'
+    try {
+      this.fetchProjectsSuccess(await this.api.fetch())
+    } catch (error) {
+      this.fetchProjectsError(error)
+    }
   }
+
+  @action.bound fetchProjectsSuccess(projects) {
+    this.projects = projects
+    this.state = "done"
+  }
+
+  @action.bound fetchProjectsError(error) {
+    this.state = 'error'
+  }
+
 
   @action add = (name) => {
     this.projects.unshift({
@@ -36,12 +50,12 @@ class ProjectStore {
   }
 
   @action remove = (id) => {
-    this.projects = this.projects.filter((project)=> project.id !== id)
+    this.projects = this.projects.filter((project) => project.id !== id)
   }
 
   @action update = (updatedProject) => {
     this.projects = this.projects.map((project) => {
-      if(project.id === updatedProject.id){
+      if (project.id === updatedProject.id) {
         return Object.assign(project, updatedProject)
       }
       return project

@@ -10,6 +10,7 @@
   box-sizing:border-box;
   background-color:$dark2;
   .list_route{
+    margin-top:30px;
     [class^="ti"]{
       margin-right: 10px;
     }
@@ -28,4 +29,9 @@
       }
     }
   }
+  .btn_logout{
+
+  
+  }
 }
+

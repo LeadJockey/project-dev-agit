@@ -10,7 +10,8 @@ import './index.scss'
   update: project.update,
   projects: project.projects,
   open: modal.open,
-  close: modal.close
+  close: modal.close,
+  getOne: project.getOne
 }))
 
 @observer class ProjectList extends Component {
@@ -19,7 +20,7 @@ import './index.scss'
   endDateEl = React.createRef()
   percentEl = React.createRef()
   stateEl = React.createRef()
-
+  
   getUpdateItemBody = ({ id, name, startDate, endDate, percent, state }) => {
     const { update, close } = this.props
     const updateThenClose = () => {
@@ -50,11 +51,14 @@ import './index.scss'
     return (
       <li>
         <div className="card_project">
-          <button type="button" className="btn_add" onClick={() => { add() }}>
-            <span className="ti-plus test">
+          <div className="card_cont">
+            <strong className="tit_cont">프로젝트 생성</strong>
+          </div>
+          <div className="group_btn">
+            <button type="button" className="ti-plus btn_add" onClick={() => { add() }}>
               <span className="screen_out">추가</span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
       </li>
     )
@@ -64,19 +68,24 @@ import './index.scss'
     const routePath = `/projects/${id}`
     const { remove, open } = this.props
     const updateBody = this.getUpdateItemBody({ id, name, startDate, endDate, percent, state })
+    const stateMap = {
+      '완료': 'done',
+      '진행중': 'doing',
+      '예정': 'todo'
+    }
     return (
       <li key={id}>
         <div className="card_project">
           <Link to={routePath} className="link_project">
-            <div className="card_bg" />
-            <picture className="card_img">
-              <img src="https://dummyimage.com/100x100/ffffff/333333" className="img_thumb" />
-            </picture>
+            <div className={`card_state ${stateMap[state]}`}>
+              <span className="txt_state">{state}</span>
+            </div>
+            <div className="card_percent">
+              <ProgressBar percent={percent} />
+            </div>
             <div className="card_cont">
               <strong className="tit_cont">{name}</strong>
               <span className="txt_info">{startDate} ~ {endDate}</span>
-              <span className="txt_info">상태 : {state}</span>
-              <ProgressBar percent={percent} />
             </div>
           </Link>
         </div>
