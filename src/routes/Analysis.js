@@ -214,6 +214,26 @@ class Analysis extends Component {
           <TitleBox {...korean.route.d3} />
         </section>
         <section className="app_section">
+          <div style={{ overflow: 'hidden' }}>
+            <div style={{ float: 'left', width: '600px', height: '300px' }}>
+              <Doughnut {...donut} />
+            </div>
+            <div style={{ float: 'left', width: '600px', height: '300px' }}>
+              <Bar {...bar} />
+            </div>
+          </div>
+        </section>
+        <section className="app_section">
+          <div style={{ overflow: 'hidden' }}>
+            <div style={{ float: 'left', width: '600px', height: '300px' }}>
+              <Radar {...rader} />
+            </div>
+            <div style={{ float: 'left', width: '600px', height: '300px' }}>
+              <Line {...line} />
+            </div>
+          </div>
+        </section>
+        <section className="app_section">
           <Doughnut {...donut} />
         </section>
         <section className="app_section">
