@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import { merge } from 'lodash'
+import { defaults, Line, Bar, Doughnut, Radar } from 'react-chartjs-2'
+import { getRandomNumber } from 'util/functions'
 import { TitleBox } from 'components'
 import { korean } from 'languages'
-import { defaults, Line, Bar, Doughnut, Radar } from 'react-chartjs-2'
-import { merge } from 'lodash'
 
 merge(defaults, {
   global: {
@@ -25,18 +26,14 @@ merge(defaults, {
   },
 })
 
-const getRandomData = (range) => {
-  return Math.round(Math.random() * (range || 100));
-}
-
 const donut = {
   data: {
     labels: ['Red', 'Green', 'Yellow'],
     datasets: [{
       data: [
-        getRandomData(), 
-        getRandomData(), 
-        getRandomData()
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber()
       ],
       color: ['#FFF'],
       borderColor: ['#000', '#000', '#000'],
@@ -59,12 +56,12 @@ const rader = {
         pointHoverBackgroundColor: '#1997c6',
         pointStyle: 'rectRot',
         data: [
-          getRandomData(),
-          getRandomData(),
-          getRandomData(),
-          getRandomData(),
-          getRandomData(),
-          getRandomData()
+          getRandomNumber(),
+          getRandomNumber(),
+          getRandomNumber(),
+          getRandomNumber(),
+          getRandomNumber(),
+          getRandomNumber()
         ],
       },
       {
@@ -76,12 +73,12 @@ const rader = {
         pointHoverBackgroundColor: '#e83ec5',
         pointStyle: 'rectRot',
         data: [
-          getRandomData(),
-          getRandomData(),
-          getRandomData(),
-          getRandomData(),
-          getRandomData(),
-          getRandomData()
+          getRandomNumber(),
+          getRandomNumber(),
+          getRandomNumber(),
+          getRandomNumber(),
+          getRandomNumber(),
+          getRandomNumber()
         ],
       },
 
@@ -109,18 +106,18 @@ const line = {
       backgroundColor: '#9F86FF',
       borderColor: '#9F86FF',
       data: [
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData()
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber()
       ]
     }, {
       label: 'My Second dataset',
@@ -128,27 +125,34 @@ const line = {
       backgroundColor: '#ffc107',
       borderColor: '#ffc107',
       data: [
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData()
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber()
       ],
     }]
   },
   options: {
-    responsive: true,
-    title: {
-      display: true,
-      text: 'Chart with Multiline Labels'
-    },
+    scales: {
+      yAxes: [{
+        gridLines: {
+          color: 'rgba(255, 255, 255, 0.1)',
+        }
+      }],
+      xAxes: [{
+        gridLines: {
+          color: 'rgba(255, 255, 255, 0.1)',
+        }
+      }]
+    }
   }
 }
 
@@ -161,13 +165,13 @@ const bar = {
       borderColor: 'hotpink',
       borderWidth: 1,
       data: [
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData()
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber()
       ]
     }, {
       label: 'Dataset 2',
@@ -175,15 +179,29 @@ const bar = {
       borderColor: 'skyblue',
       borderWidth: 1,
       data: [
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData(),
-        getRandomData()
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber(),
+        getRandomNumber()
       ]
     }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        gridLines: {
+          color: 'rgba(255, 255, 255, 0.1)',
+        }
+      }],
+      xAxes: [{
+        gridLines: {
+          color: 'rgba(255, 255, 255, 0.1)',
+        }
+      }]
+    }
   }
 }
 
