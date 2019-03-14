@@ -7,13 +7,10 @@ import ProgressBarComp from './ProgressBar'
 import ModalComp from './Modal'
 import DelayLinkComp from './DelayLink'
 import LoadingScreenComp from './LoadingScreen'
-<<<<<<< HEAD
-import NewsComp from './News'
-=======
 import WorkListComp from './WorkList'
 import LoginComp from './Login'
 import UserMenuComp from './UserMenu'
->>>>>>> c15ca2b8dc00a3999dd23178e6077d828c34657b
+import NewsListComp from './NewsList'
 
 export const App = AppComp
 export const Counter = CounterComp
@@ -24,10 +21,7 @@ export const ProgressBar = ProgressBarComp
 export const Modal = ModalComp
 export const DelayLink = DelayLinkComp
 export const LoadingScreen = LoadingScreenComp
-<<<<<<< HEAD
-export const NewsContent = NewsComp
-=======
 export const WorkList = WorkListComp
 export const Login = LoginComp
 export const UserMenu = UserMenuComp
->>>>>>> c15ca2b8dc00a3999dd23178e6077d828c34657b
+export const NewsList = NewsListComp
