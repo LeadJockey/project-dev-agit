@@ -50,7 +50,6 @@ class WorkList extends Component {
 
   componentDidMount () {
     const { projectId, fetchWorks } = this.props
-    console.log(this.props.projectId)
     fetchWorks(projectId)
   }
   render () {

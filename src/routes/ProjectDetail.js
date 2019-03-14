@@ -13,6 +13,9 @@ class ProjectDetail extends Component {
     const res = path + `/${projectId}` + children[pathName].path
     return res
   }
+  workAdditionalMenu = () => {
+    return <div>aaaaa</div>
+  }
 
   render () {
     return (
@@ -34,7 +37,10 @@ class ProjectDetail extends Component {
           </Link>
         </section>
         <section className='app_section'>
-          <TitleBox {...korean.route.work} />
+          <TitleBox
+            {...korean.route.work}
+            additional={this.workAdditionalMenu()}
+          />
           <WorkList
             projectId={this.props.match.params.id}
             detailPath={this.getRouteChidrenPath(ROUTE_PATH.PROJECTS, 'WORKS')}
