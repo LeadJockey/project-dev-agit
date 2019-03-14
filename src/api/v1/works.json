@@ -2,65 +2,155 @@
   {
     "id": 1,
     "projectId": 1,
-    "name": "work1",
+    "name": "삼성전자 1Q 어닝쇼크 우려…커지는 M&A설M&A설M&A설",
     "startDate": "2019.01.01",
     "endDate": "2019.02.01",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla",
     "member": [
-      "Donald Trump",
-      "Mike Pompeo"
+      {
+        "name": "Donald Trump",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F7%2F201804241120041041.jpg"
+      },
+      {
+        "name": "Mike Pompeo",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F124%2F201803141046476261.png"
+      }
     ],
-    "state": "완료"
+    "content": "",
+    "state": "완료",
+    "category": "Plan"
   },
   {
     "id": 2,
     "projectId": 2,
-    "name": "work2",
+    "name": "리액트마스터",
     "startDate": "2019.02.01",
     "endDate": "2019.03.01",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla",
     "member": [
-      "Steve Jobs",
-      "Bill Gates"
+      {
+        "name": "Steve Jobs",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F198%2F201601251600441211.jpg"
+      },
+      {
+        "name": "Bill Gates",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F85%2F201402051053302201.jpg"
+      }
     ],
+    "content": "",
     "percent": 80,
-    "state": "진행중"
+    "state": "진행중",
+    "category": "Design"
   },
   {
     "id": 3,
     "projectId": 3,
-    "name": "work3",
+    "name": "리액트마스터",
     "startDate": "2019.03.01",
     "endDate": "2019.04.01",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla",
     "member": [
-      "Jeffrey Preston Bezos",
-      "Geon hee Lee"
+      {
+        "name": "Jeffrey Preston Bezos",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F147%2F201502261056113241.jpg"
+      },
+      {
+        "name": "Gun hee Lee",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F64%2F20120625135421151.jpg"
+      }
     ],
+    "content": "",
     "percent": 0,
-    "state": "예정"
+    "state": "예정",
+    "category": "Development"
   },
   {
     "id": 4,
-    "projectId": 3,
-    "name": "work3",
+    "projectId": 2,
+    "name": "리액트마스터",
     "startDate": "2019.03.01",
     "endDate": "2019.04.01",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla",
     "member": [
-      "Jeffrey Preston Bezos",
-      "Geon hee Lee"
+      {
+        "name": "Larry Page",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F139%2F201510051443198171.jpg"
+      },
+      {
+        "name": "Gun hee Lee",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F64%2F20120625135421151.jpg"
+      }
     ],
+    "content": "",
     "percent": 0,
-    "state": "예정"
+    "state": "예정",
+    "category": "Development"
   },
   {
     "id": 5,
     "projectId": 1,
-    "name": "work3",
+    "name": "#솔플보다는 트리플 브롤스타즈",
     "startDate": "2019.03.01",
     "endDate": "2019.04.01",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla",
     "member": [
-      "Jeffrey Preston Bezos",
-      "Geon hee Lee"
+      {
+        "name": "Larry Page",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F139%2F201510051443198171.jpg"
+      },
+      {
+        "name": "Gun hee Lee",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F64%2F20120625135421151.jpg"
+      }
     ],
+    "content": "",
     "percent": 0,
-    "state": "예정"
+    "state": "예정",
+    "category": "Development"
+  },
+  {
+    "id": 6,
+    "projectId": 1,
+    "name": "슬슬 잠이 오기 시작하던 참이다...",
+    "startDate": "2019.01.01",
+    "endDate": "2019.02.01",
+    "description": "미국이 상임이사국으로 있는 유엔 안전보장이사회 산하 대북제재위가 전날 북한의 제재위반 사례를 담은 연례보고서를 펴낸지 하루만에 발간한 국무부 인권보고서에서다.'아킬레스건'인 북한 인권 문제를 건드리면서도 수위는 전년에 비해 한층 누그러뜨림으로써 북한의 태도변화를 견인해내려는 전략적 포석이 읽힌다.한이 가장 아파할 두 가지 카드인 제재와 인권 문제를 연달아 '쌍끌이'로 꺼내들며 '포스트 하노이' 국면에서 북한을 향한 압박에 나서면서도 '죄고 풀기'식 강온 병행을 통해 북한과의 밀당을 연출하고 있는 느낌이다. 제재의 고삐는 다시 한번 조이면서도 인권 대응을 놓고는 '전략적 유연성'을 발휘하는 모양새다. ",
+    "member": [
+      {
+        "name": "Donald Trump",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F7%2F201804241120041041.jpg"
+      },
+      {
+        "name": "Mike Pompeo",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F124%2F201803141046476261.png"
+      },
+      {
+        "name": "Donald Trump1",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F7%2F201804241120041041.jpg"
+      },
+      {
+        "name": "Mike Pompeo2",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F124%2F201803141046476261.png"
+      },
+      {
+        "name": "Donald Trump3",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F7%2F201804241120041041.jpg"
+      },
+      {
+        "name": "Mike Pompeo4",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F124%2F201803141046476261.png"
+      },
+      {
+        "name": "Donald Trump5",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F7%2F201804241120041041.jpg"
+      },
+      {
+        "name": "Mike Pompeo6",
+        "userImg": "https://search.pstatic.net/common?type=a&size=120x150&quality=95&direct=true&src=http%3A%2F%2Fsstatic.naver.net%2Fpeople%2F124%2F201803141046476261.png"
+      }
+    ],
+    "content": "",
+    "state": "완료",
+    "category": "Design"
   }
 ]
