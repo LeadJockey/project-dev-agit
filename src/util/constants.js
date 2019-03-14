@@ -18,7 +18,7 @@ export const ROUTE_PATH = {
     children: {
       MEMBERS: { path: '/members' },
       WORKS: { path: '/works' },
-      ANALYSIS: { path: '/analysis' },
+      ANALYSIS: { path: '/analysis' }
     }
   },
   NEWS: {
@@ -31,7 +31,10 @@ export const ROUTE_PATH = {
   },
   WORKS: {
     path: '/works',
-    icon: 'ti-target'
+    icon: 'ti-target',
+    children: {
+      WORKS: { path: '/works' }
+    }
   },
   TEST: {
     path: '/test',
@@ -48,5 +51,7 @@ export const FPS = 1000 / 60
 
 // not support msg
 export const NOT_SUPPORT_MSG_SVG = 'Sorry, your browser does not support SVG.'
-export const NOT_SUPPORT_MSG_CANVAS = 'Sorry, your browser does not support CANVAS'
-export const NOT_SUPPORT_MSG_HTML5 = 'Sorry, your browser does not support HTML5.'
+export const NOT_SUPPORT_MSG_CANVAS =
+  'Sorry, your browser does not support CANVAS'
+export const NOT_SUPPORT_MSG_HTML5 =
+  'Sorry, your browser does not support HTML5.'

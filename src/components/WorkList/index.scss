@@ -1,1 +1,122 @@
-@import '../../assets/scss/base';
+@import "../../assets/scss/base";
+.work_list_comp {
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // grid-gap: 20px;
+  overflow: hidden;
+  margin: 0 -12px;
+  li {
+    float: left;
+    width: 380px;
+    margin: 0 12px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    padding: 50px 30px 24px;
+    background: #1b1d24;
+    .c_f {
+      margin-bottom: 20px;
+    }
+    .btn_more {
+      color: #fff;
+      font-size: 18px;
+    }
+    .btn_del {
+      color: #fff;
+      font-size: 16px;
+      margin-top: -4px;
+    }
+    .txt_category {
+      float: left;
+    }
+    .txt_date {
+      opacity: 0.5;
+      margin-bottom: 40px;
+      display: block;
+    }
+    .work_name {
+      display: block;
+      margin-bottom: 15px;
+      font-size: 24px;
+      font-weight: normal;
+      @include ellipsis;
+    }
+    .desc_work {
+      overflow: hidden;
+      display: -webkit-box;
+      margin-bottom: 30px;
+      max-height: 3em;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+      font-size: 14px;
+      line-height: 1.5em;
+    }
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 15px;
+      content: "";
+    }
+    &.development {
+      &:after {
+        background: $developmentColor;
+      }
+    }
+    &.plan {
+      &:after {
+        background: $planColor;
+      }
+    }
+    &.design {
+      &:after {
+        background: $designColor;
+      }
+    }
+  }
+}
+.member_list_comp {
+  overflow-x: auto;
+  display: flex;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: auto;
+  border-bottom: 1px solid $borderColor;
+  margin-bottom: 20px;
+  .member_profile {
+    width: 60px;
+    margin-right: 10px;
+  }
+  .member_img {
+    display: block;
+    margin: 0 auto 8px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    img {
+      width: 100%;
+    }
+  }
+  .member_name {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+.btn_detail {
+  display: block;
+  width: 100%;
+  background: #0093ff;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  height: 40px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 40px;
+}
