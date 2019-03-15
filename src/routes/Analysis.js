@@ -211,7 +211,7 @@ class Analysis extends Component {
     return (
       <>
         <section className="app_section">
-          <TitleBox {...korean.route.d3} />
+          <TitleBox {...korean.route.analysis} />
         </section>
         <section className="app_section">
           <div style={{ overflow: 'hidden' }}>

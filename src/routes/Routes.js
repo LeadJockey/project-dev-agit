@@ -6,7 +6,7 @@ import * as Page from 'routes'
 class Routes extends Component {
   getRouteChidrenPath = (routeObj, pathName) => {
     const { path, children } = routeObj
-    const res = path + `/:id` + children[pathName].path+`/:id`
+    const res = path + `/:id` + children[pathName].path
     return res
   }
 
@@ -21,7 +21,8 @@ class Routes extends Component {
 
         <Route path={ROUTE_PATH.PROJECTS.path} exact component={Page.Project} />
         <Route path={ROUTE_PATH.PROJECTS.path + '/:id'} exact component={Page.ProjectDetail} />
-        <Route path={this.getRouteChidrenPath(ROUTE_PATH.PROJECTS, 'WORKS')} exact component={Page.Work} />
+        <Route path={this.getRouteChidrenPath(ROUTE_PATH.PROJECTS, 'WORKS')} exact />
+        <Route path={this.getRouteChidrenPath(ROUTE_PATH.PROJECTS, 'WORKS')+`/:id`} exact component={Page.Work} />
         <Route path={this.getRouteChidrenPath(ROUTE_PATH.PROJECTS, 'MEMBERS')} exact component={Page.Member} />
         <Route path={this.getRouteChidrenPath(ROUTE_PATH.PROJECTS, 'ANALYSIS')} exact component={Page.Analysis}/>
 

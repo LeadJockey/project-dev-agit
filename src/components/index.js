@@ -10,6 +10,7 @@ import LoadingScreenComp from './LoadingScreen'
 import WorkListComp from './WorkList'
 import LoginComp from './Login'
 import UserMenuComp from './UserMenu'
+import NewsListComp from './NewsList'
 
 export const App = AppComp
 export const Counter = CounterComp
@@ -23,3 +24,4 @@ export const LoadingScreen = LoadingScreenComp
 export const WorkList = WorkListComp
 export const Login = LoginComp
 export const UserMenu = UserMenuComp
+export const NewsList = NewsListComp
