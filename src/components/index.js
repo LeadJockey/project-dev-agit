@@ -8,6 +8,7 @@ import ModalComp from './Modal'
 import DelayLinkComp from './DelayLink'
 import LoadingScreenComp from './LoadingScreen'
 import WorkListComp from './WorkList'
+import WorkContentsComp from './WorkContents'
 import LoginComp from './Login'
 import UserMenuComp from './UserMenu'
 import NewsListComp from './NewsList'
@@ -22,6 +23,7 @@ export const Modal = ModalComp
 export const DelayLink = DelayLinkComp
 export const LoadingScreen = LoadingScreenComp
 export const WorkList = WorkListComp
+export const WorkContents = WorkContentsComp
 export const Login = LoginComp
 export const UserMenu = UserMenuComp
 export const NewsList = NewsListComp

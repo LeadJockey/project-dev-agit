@@ -27,6 +27,10 @@
       "title": "WORK LIST",
       "desc": "개별프로젝트 내부 업무 목록 입니다."
     },
+    "workDetail":{
+      "title": "WORK Detial",
+      "desc": "s."
+    },    
     "analysis":{
       "title": "analysis TEST",
       "desc": "analysis 데이터 시각화 적용 테스트"

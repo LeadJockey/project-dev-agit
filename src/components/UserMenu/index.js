@@ -5,7 +5,6 @@ import { CLIENT_ID } from '../../util/constants'
 import './index.scss'
 
 import defaultImg from '../../assets/images/default_user.png'
-import logoutImg from '../../assets/images/logout.png'
 
 @inject(({ login }) => ({
   authenticate: login.authenticate,
@@ -47,7 +46,7 @@ class Login extends Component {
               <div className='user_info'>
                 <div className='user_profile'>
                   <picture className='profile_img'>
-                    <img src={defaultImg} className='default_img' />
+                    <img src={defaultImg} className='default_img' alt='' />
                   </picture>
                 </div>
                 <div className='wrap_btn'>
@@ -73,7 +72,7 @@ class Login extends Component {
                 </span>
                 <div className='user_profile'>
                   <picture className='profile_img'>
-                    <img src={userImg} className='user_img' />
+                    <img src={userImg} className='user_img' alt='' />
                   </picture>
                 </div>
                 <button className='btn_logout' onClick={renderProps.onClick}>

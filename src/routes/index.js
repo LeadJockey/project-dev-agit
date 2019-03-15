@@ -4,6 +4,7 @@ import HomePage from './Home'
 import ProjectPage from './Project'
 import ProjectDetailPage from './ProjectDetail'
 import WorkPage from './Work'
+import WorkDetailPage from './WorkDetail'
 import TestPage from './Test'
 import InitialPage from './Initial'
 import AnalysisPage from './Analysis'
@@ -16,6 +17,7 @@ export const Home = HomePage
 export const Project = ProjectPage
 export const ProjectDetail = ProjectDetailPage
 export const Work = WorkPage
+export const WorkDetail = WorkDetailPage
 export const Test = TestPage
 export const Initial = InitialPage
 export const Analysis = AnalysisPage

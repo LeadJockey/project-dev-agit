@@ -21,8 +21,8 @@ class Routes extends Component {
 
         <Route path={ROUTE_PATH.PROJECTS.path} exact component={Page.Project} />
         <Route path={ROUTE_PATH.PROJECTS.path + '/:id'} exact component={Page.ProjectDetail} />
-        <Route path={this.getRouteChidrenPath(ROUTE_PATH.PROJECTS, 'WORKS')} exact />
-        <Route path={this.getRouteChidrenPath(ROUTE_PATH.PROJECTS, 'WORKS')+`/:id`} exact component={Page.Work} />
+        <Route path={this.getRouteChidrenPath(ROUTE_PATH.PROJECTS, 'WORKS')} exact component={Page.Work} />
+        <Route path={this.getRouteChidrenPath(ROUTE_PATH.PROJECTS, 'WORKS')+`/:id`} exact component={Page.WorkDetail} />
         <Route path={this.getRouteChidrenPath(ROUTE_PATH.PROJECTS, 'MEMBERS')} exact component={Page.Member} />
         <Route path={this.getRouteChidrenPath(ROUTE_PATH.PROJECTS, 'ANALYSIS')} exact component={Page.Analysis}/>
 

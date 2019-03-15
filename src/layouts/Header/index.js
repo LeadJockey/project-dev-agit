@@ -10,7 +10,7 @@ class Header extends Component {
       <header className='app_header'>
         <h1 className='app_logo'>
           <Link to={ROUTE_PATH.INDEX}>
-            <img src={logo} className='img_logo' />
+            <img src={logo} className='img_logo' alt='escape techin' />
             <strong className='app_tit'>Dev-agit</strong>
           </Link>
         </h1>

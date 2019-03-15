@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { observer, inject } from 'mobx-react'
-import { ROUTE_PATH } from 'util/constants'
 import './index.scss'
-import Work from '../../routes/Work'
 
 @inject(({ work }) => ({
   works: work.works,
-  fetchWorks: work.fetchWorks
+  fetchWorksList: work.fetchWorksList
 }))
 @observer
 class WorkList extends Component {
-  renderItem = ({ id, name, member, description, category, endDate }) => {
-    const routePath = `${this.props.detailPath}/${id}`
+  routePath = () => {
+    return this.props.detailPath
+  }
 
+  renderItem = ({ id, name, member, description, category, endDate }) => {
     return (
       <li key={id} className={category.toLowerCase()}>
         <div className='c_f'>
@@ -31,7 +31,7 @@ class WorkList extends Component {
         <p className='desc_work'>{description}</p>
         <div className='member_list_comp'>{member.map(this.renderItemObj)}</div>
         <span className='txt_date'>Dead Line {endDate}</span>
-        <Link to={routePath} className='btn_detail'>
+        <Link to={`${this.routePath()}/${id}`} className='btn_detail'>
           View Detail
         </Link>
       </li>
@@ -41,7 +41,7 @@ class WorkList extends Component {
     return (
       <div className='member_profile' key={name}>
         <picture className='member_img'>
-          <img src={userImg} />
+          <img src={userImg} alt={name} />
         </picture>
         <em className='member_name'>{name}</em>
       </div>
@@ -49,12 +49,24 @@ class WorkList extends Component {
   }
 
   componentDidMount () {
-    const { projectId, fetchWorks } = this.props
-    fetchWorks(projectId)
+    const { projectId, fetchWorksList, allList } = this.props
+    fetchWorksList(projectId, allList)
   }
   render () {
-    const { works } = this.props
-    return <ul className='work_list_comp'>{works.map(this.renderItem)}</ul>
+    const { works, allList } = this.props
+    return (
+      <div className='work_list_comp'>
+        <ul className='list_work'>{works.map(this.renderItem)}</ul>
+        <div className='wrap_btn'>
+          {!allList ? (
+            <Link to={this.routePath()} className='btn_more'>
+              <i className='ti-arrow-right' />
+              View More
+            </Link>
+          ) : null}
+        </div>
+      </div>
+    )
   }
 }
 export default WorkList

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { UserMenu } from 'components'
 import { ROUTE_PATH } from 'util/constants'
 import './index.scss'
-import { observer, inject } from 'mobx-react'
 
 class Nav extends Component {
   renderItem = routeName => {
@@ -21,7 +20,6 @@ class Nav extends Component {
   }
 
   render () {
-    const { authenticate, userImg } = this.props
     return (
       <nav className='app_nav'>
         <UserMenu />

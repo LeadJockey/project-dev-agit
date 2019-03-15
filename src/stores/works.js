@@ -8,6 +8,7 @@ class WorksApi {
 
 class WorkStore {
   @observable works = []
+  @observable detail = []
   @observable current = {}
   @observable state = 'pendding' // pendding / done / error
 
@@ -16,18 +17,35 @@ class WorkStore {
     this.api = new WorksApi()
   }
 
-  @action fetchWorks = async id => {
+  @action fetchWorksList = async (id, allList) => {
     this.state = 'pending'
     try {
-      this.fetchWorksSuccess(await this.api.fetch(), id)
+      this.fetchList(await this.api.fetch(), id, allList)
+    } catch (error) {
+      this.fetchWorksError(error)
+    }
+  }
+  @action fetchWorkDetail = async id => {
+    this.state = 'pending'
+    try {
+      this.fetchDetail(await this.api.fetch(), id)
     } catch (error) {
       this.fetchWorksError(error)
     }
   }
 
-  @action.bound fetchWorksSuccess (works, id) {
-    this.works = works.filter(item => item.projectId == id)
+  @action.bound fetchList (works, id, allList) {
+    allList
+      ? (this.works = works.filter(item => item.projectId === id * 1))
+      : (this.works = works
+        .filter(item => item.projectId === id * 1)
+        .slice(0, 4))
     this.state = 'done'
+  }
+
+  @action.bound fetchDetail (works, id) {
+    this.detail = works.filter(item => item.id === id * 1)
+    console.log(this.detail)
   }
 
   @action.bound fetchWorksError (error) {
@@ -37,9 +55,6 @@ class WorkStore {
   @action find = _id => {
     const result = this.resources.filter(({ id }) => id === _id)
     if (result.length === 1) this.current = result[0]
-  }
-  filterData (data, id) {
-    return data == id
   }
 }
 

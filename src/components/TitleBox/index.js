@@ -10,7 +10,6 @@ class TitleBox extends Component {
           <h2 className='txt_tit'>{title}</h2>
           <p className='txt_desc'>{desc}</p>
         </div>
-        {console.log(this.props)}
         {this.props.additional ? (
           <div className='section_util'>{this.props.additional}</div>
         ) : null}

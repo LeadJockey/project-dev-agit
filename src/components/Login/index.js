@@ -4,11 +4,9 @@ import { GoogleLogin, GoogleLogout } from 'react-google-login'
 import { CLIENT_ID } from '../../util/constants'
 import './index.scss'
 
-import defaultImg from '../../assets/images/default_user.png'
-
 @inject(({ login }) => ({
   authenticate: login.authenticate,
-  userToken: login.userToken,
+  // userToken: login.userToken,
   userImg: login.userImg,
   loginAction: login.loginAction,
   logoutAction: login.logoutAction
@@ -34,7 +32,7 @@ class Login extends Component {
   }
 
   render () {
-    const { authenticate, userToken, userImg } = this.props
+    const { authenticate, userImg } = this.props
 
     return (
       <div className='login_comp'>
@@ -46,20 +44,12 @@ class Login extends Component {
             render={renderProps => (
               <div className='default_profile'>
                 <div className='wrap_util'>
-                  <a
-                    href='javascript:;'
-                    className='btn_util'
-                    onClick={this.join}
-                  >
+                  <button className='btn_util' onClick={this.join}>
                     회원가입
-                  </a>
-                  <a
-                    href='javascript:;'
-                    className='btn_util'
-                    onClick={renderProps.onClick}
-                  >
+                  </button>
+                  <button className='btn_util' onClick={renderProps.onClick}>
                     로그인
-                  </a>
+                  </button>
                 </div>
               </div>
             )}
@@ -71,7 +61,7 @@ class Login extends Component {
             onLogoutSuccess={this.logout}
             render={renderProps => (
               <button className='btn_login' onClick={renderProps.onClick}>
-                <img src={userImg} className='user_img' />
+                <img src={userImg} className='user_img' alt='' />
               </button>
             )}
           />
