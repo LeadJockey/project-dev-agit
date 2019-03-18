@@ -1,4 +1,4 @@
-@import '../../assets/scss/base';
+@import '../../../assets/scss/base';
 .user_info_comp{
   padding-bottom: 20px;
   border-bottom: 1px solid $borderColor;  
@@ -33,7 +33,7 @@
     width:20px;
     height: 20px;
     margin-right: 10px;
-    background:url(../../assets/images/logout.png) no-repeat;
+    background:url(../../../assets/images/logout.png) no-repeat;
     background-size:auto 100%;
     vertical-align: -5px;
   }
