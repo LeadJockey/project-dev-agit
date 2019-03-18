@@ -40,12 +40,12 @@ class WorkStore {
       : (this.works = works
         .filter(item => item.projectId === id * 1)
         .slice(0, 4))
+    console.log(this.works)
     this.state = 'done'
   }
 
   @action.bound fetchDetail (works, id) {
     this.detail = works.filter(item => item.id === id * 1)
-    console.log(this.detail)
   }
 
   @action.bound fetchWorksError (error) {
