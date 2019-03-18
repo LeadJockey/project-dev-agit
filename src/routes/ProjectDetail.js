@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { ROUTE_PATH } from 'util/constants'
 import { TitleBox } from 'components'
 import { korean } from 'languages'
-import WorkList from '../components/WorkList'
+import {WorkList} from 'components'
 
 class ProjectDetail extends Component {
   getRouteChidrenPath = (routeObj, pathName) => {
