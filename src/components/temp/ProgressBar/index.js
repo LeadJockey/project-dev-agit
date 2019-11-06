@@ -34,9 +34,9 @@ class ProgressBar extends Component {
   render() {
     const { percent } = this.props
     return (
-      <div className="comp_progress_bar _motion_comm">
+      <div className="comp_progress_bar">
         <div className="bar_progress" ref={el => this.bar = el} />
-        <span className="txt_progress">진행률 : {percent}%</span>
+        <span className="txt_progress">{percent}%</span>
       </div>
     )
   }

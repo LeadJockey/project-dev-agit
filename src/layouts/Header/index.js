@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { ROUTE_PATH } from 'util/constants'
 import './index.scss'
 import logo from '../../assets/images/logo.png'
-import Login from '../../components/Login/Login'
 
 class Header extends Component {
   render () {
@@ -11,11 +10,10 @@ class Header extends Component {
       <header className='app_header'>
         <h1 className='app_logo'>
           <Link to={ROUTE_PATH.INDEX}>
-            <img src={logo} className='img_logo' />
+            <img src={logo} className='img_logo' alt='escape techin' />
             <strong className='app_tit'>Dev-agit</strong>
           </Link>
         </h1>
-        <Login />
       </header>
     )
   }

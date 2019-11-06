@@ -1,16 +1,12 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 import { GoogleLogin, GoogleLogout } from 'react-google-login'
-import { CLIENT_ID } from '../../util/constants'
-
+import { CLIENT_ID } from 'util/constants'
 import './index.scss'
-
-const defaultImg =
-  'http://image.chosun.com/sitedata/image/201810/01/2018100103196_0.jpg'
 
 @inject(({ login }) => ({
   authenticate: login.authenticate,
-  userToken: login.userToken,
+  // userToken: login.userToken,
   userImg: login.userImg,
   loginAction: login.loginAction,
   logoutAction: login.logoutAction
@@ -23,7 +19,7 @@ class Login extends Component {
   }
 
   authenticationFail = () => {
-    alert('인증실패 다시 해')
+    // alert('인증실패 다시 해')
   }
 
   logout = () => {
@@ -31,8 +27,12 @@ class Login extends Component {
     logoutAction()
   }
 
+  join = () => {
+    alert('힝! 속았지? 그딴거 없어')
+  }
+
   render () {
-    const { authenticate, userToken, userImg } = this.props
+    const { authenticate, userImg } = this.props
 
     return (
       <div className='login_comp'>
@@ -42,9 +42,16 @@ class Login extends Component {
             onSuccess={this.authentication}
             onFailure={this.authenticationFail}
             render={renderProps => (
-              <button className='btn_login' onClick={renderProps.onClick}>
-                <img src={defaultImg} className='user_img' />
-              </button>
+              <div className='default_profile'>
+                <div className='wrap_util'>
+                  <button className='btn_util' onClick={this.join}>
+                    회원가입
+                  </button>
+                  <button className='btn_util' onClick={renderProps.onClick}>
+                    로그인
+                  </button>
+                </div>
+              </div>
             )}
           />
         ) : (
@@ -54,7 +61,7 @@ class Login extends Component {
             onLogoutSuccess={this.logout}
             render={renderProps => (
               <button className='btn_login' onClick={renderProps.onClick}>
-                <img src={userImg} className='user_img' />
+                <img src={userImg} className='user_img' alt='' />
               </button>
             )}
           />

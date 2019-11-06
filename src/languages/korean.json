@@ -1,5 +1,8 @@
 {
   "route": {
+    "buttons":{
+      "add":"추가"
+    },
     "initial": {
       "title": "INDEX",
       "desc": "초기화면 입니다."
@@ -16,13 +19,25 @@
       "title": "PROJECT LIST",
       "desc": "프로젝트 목록 입니다."
     },
+    "projectDetail":{
+      "title": "PROJECT DETAIL",
+      "desc": "프로젝트 상세 페이지 입니다."
+    },
     "work":{
       "title": "WORK LIST",
       "desc": "개별프로젝트 내부 업무 목록 입니다."
     },
-    "d3":{
-      "title": "D3 TEST",
-      "desc": "D3 데이터 시각화 적용 테스트"
+    "workDetail":{
+      "title": "WORK Detial",
+      "desc": "s."
+    },    
+    "analysis":{
+      "title": "analysis TEST",
+      "desc": "analysis 데이터 시각화 적용 테스트"
+    },
+    "member":{
+      "title": "MEMBER LIST",
+      "desc": "개별프로젝트 내부 맵버 목록 입니다."
     }
   }
 }

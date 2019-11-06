@@ -1,7 +1,8 @@
-@import '../../assets/scss/base';
+@import '../../../assets/scss/base';
 
 .comp_title_box{
-  margin:0 -60px;
+  display: flex;
+  margin:0 -60px 50px;
   padding:0 60px 60px;
   border-bottom: 1px solid $borderColor;
   .txt_tit{

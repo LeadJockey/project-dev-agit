@@ -1,0 +1,67 @@
+@import '../../../assets/scss/base';
+.user_info_comp{
+  padding-bottom: 20px;
+  border-bottom: 1px solid $borderColor;  
+  .user_profile{
+    margin-bottom: 20px;
+    .profile_img{
+      display: block;
+      overflow: hidden;
+      width:100px;
+      height: 100px;
+      margin: auto;
+      border-radius: 50%;
+      border:1px solid #6A6E7C;
+      .default_img{
+        display: block;
+        width: 80%;
+        margin: 20px auto;
+      }
+      .user_img{
+        display: block;
+        width:100%;
+      }
+    }
+  }
+  .greeting_txt{
+    display: block;
+    margin-bottom: 15px;
+    text-align: center
+  }
+  .ico_logout{
+    display: inline-block;
+    width:20px;
+    height: 20px;
+    margin-right: 10px;
+    background:url(../../../assets/images/logout.png) no-repeat;
+    background-size:auto 100%;
+    vertical-align: -5px;
+  }
+  .wrap_btn{
+    overflow: hidden;
+    button{
+      float: left;
+      width: 50%;
+      margin: 20px 0 0;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 15px;
+      &:first-child{
+        border-right:1px solid rgba(255,255,255,0.2);
+      }
+    }
+  }
+  .btn_logout{
+    display: block;
+    width:100px;
+    height: 30px;
+    margin: auto;
+    background: none;
+    font-size: 15px;
+    line-height: 30px;
+    border: none;
+    text-align: center;
+    color: #fff;
+  }
+}

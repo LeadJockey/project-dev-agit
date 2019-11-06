@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import { EmptyContent } from 'components'
+import { NewsList } from 'components'
 
 class News extends Component {
   render() {
     return (
       <section className="app_section">
-        <EmptyContent />
-        뉴스 만들래
+        <NewsList />
         
+            
       </section>
     )
   }
